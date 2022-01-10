@@ -44,5 +44,13 @@
             </div>
         </div>
     </form>
+    <?php
+    function mysql_levelUp(){
+        return new mysqli("localhost","root","","levelup");
+    }
+    $mysql= mysql_levelUp();
+    $select=$mysql->query('select titulo from carrusel');
+    print_r($select);
+    ?>
 </body>
 </html>

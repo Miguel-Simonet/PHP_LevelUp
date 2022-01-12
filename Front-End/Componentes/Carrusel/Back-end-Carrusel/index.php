@@ -58,11 +58,18 @@
     echo "<h1>Items</h1>";
     echo "<div>";
     if ($chequeo > 0) {
-        echo "<table class='table'><tr><th scope='col'>Id</th><th scope='col'>titulo</th><th scope='col'>descripcion</th><th scope='col'>image</th><th scope='col'>created_at</th></tr>";
+        echo 
+            "<table class='table'>
+                <tr>
+                    <th scope='col'>Id</th>
+                    <th scope='col'>titulo</th>
+                    <th scope='col'>descripcion</th>
+                    <th scope='col'>image</th>
+                    <th scope='col'>created_at</th>
+                </tr>";
         while ($row = mysqli_fetch_assoc($result)) {
             //for loop better than this line
             echo "<tr>
-            <th scope='row'></th>
                 <td>" . $row['id'] . "</td>
                 <td>" . $row['titulo'] . "</td>
                 <td>" . $row['descripcion'] . "</td>

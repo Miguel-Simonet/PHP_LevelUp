@@ -48,6 +48,7 @@
     function mysql_levelUp(){
         return new mysqli("localhost","root","","levelup");
     }
+
     $conn = mysql_levelUp();
     $result=$conn->query("select * from carrusel");
     $chequeo = mysqli_num_rows($result);
@@ -65,9 +66,9 @@
                 <td>" . $row['image'] . "</td>
                 <td>" . $row['created_at'] . "</td>
                 <td>
-                <form method='POST'>
-                <insert type='submit' class='btn btn-danger' name='delete' value='delete'>Delete</insert></td>
-                </form>
+                <form method='get' action='db.php'>
+                <insert type='submit' class='btn btn-danger' name='delete' value='true'>Delete</insert>
+                </form></td>
             </tr>
             ";
         }

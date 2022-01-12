@@ -46,7 +46,7 @@
         </div>
       ";
     $a=1;
-      while ($a <= 3) {
+      while ($a <= 2) {
         echo "
         <div class='carousel-item'>
         <img src='./imagen/".$resultado[$a]."' class='d-block w-100' alt='...'>

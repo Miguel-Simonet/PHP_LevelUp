@@ -5,5 +5,7 @@ function mysql_levelUp(){
     return new mysqli("localhost","root","","levelup");
 }
     $mysql= mysql_levelUp();
-    $mysql->query("delete * from carrusel where id='.$delete_id.'");
-    
+    $mysql->query("delete from carrusel where id=$delete_id;");
+    header('Location: index.php');
+
+

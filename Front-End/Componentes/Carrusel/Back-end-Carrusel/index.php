@@ -55,7 +55,7 @@
     echo "<div>";
     if ($chequeo>0) {
         echo "<table class='table'><tr><th scope='col'>Id</th><th scope='col'>titulo</th><th scope='col'>descripcion</th><th scope='col'>image</th><th scope='col'>created_at</th></tr>";
-        while ($row = mysqli_fetch_assoc($result)){ 
+        while ($row = mysqli_fetch_assoc($result)){
             //for loop better than this line
             echo "<tr>
             <th scope='row'></th>
@@ -64,12 +64,18 @@
                 <td>" . $row['descripcion'] . "</td>
                 <td>" . $row['image'] . "</td>
                 <td>" . $row['created_at'] . "</td>
-            </tr>";
+                <td>
+                <form method='POST'>
+                <insert type='submit' class='btn btn-danger' name='delete' value='delete'>Delete</insert></td>
+                </form>
+            </tr>
+            ";
         }
         echo "</table></div>";
     } else {
         echo "No results<br>";
     }
+
     mysqli_close($conn);
 ?>
 </body>

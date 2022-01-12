@@ -76,7 +76,7 @@
                 <td>" . $row['image'] . "</td>
                 <td>" . $row['created_at'] . "</td>
                 <td>
-                    <form method='post' action='delete.php'>
+                    <form method='post' action='db.php'>
                         <input id='delete' type='hidden' class='btn btn-danger' name='delete' value=".$row['id']."></input>
                         <button type='submit' class='btn btn-danger'>Delete</button>
                     </form>

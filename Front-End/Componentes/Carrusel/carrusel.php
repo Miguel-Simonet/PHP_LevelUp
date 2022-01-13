@@ -49,7 +49,7 @@
       //Mostrar los datos------------------------------
       //print_r($imagen); <-- DEPURACION DE CODIGO
       //echo $imagen[0];
-      print_r($titulo);
+      //print_r($titulo);
       echo "
         <div class='carousel-item active'> "/* EL ACTIVE ES NECESARIO*/ . "
           <img style='height:535px' src='./imagen/" . $imagen[0] . "' class='d-block w-100' alt='...'>

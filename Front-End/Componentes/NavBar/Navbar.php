@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
-  <!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Boostrap-->
-  <?php
-  include("../../../Boostrap_Thinks/boostrap.php");
-  ?>
+  <!--<?php
+      include("../../../Boostrap_Thinks/boostrap.php");
+      ?>-->
 </head>
 <style>
   /* Google Fonts Import Link */
@@ -401,7 +398,7 @@
       <li>
         <div class="profile-details">
           <div class="profile-content">
-            <img src="../Carrusel/imagen/4.jpg" alt="profileImg">
+            <img src="https://th.bing.com/th/id/R.0b94498aa4863bed528f68b6192425e1?rik=YRNMkX4Zd%2bmzNw&pid=ImgRaw&r=0" alt="profileImg">
           </div>
           <div class="name-job">
             <div class="profile_name">Prem Shahi</div>

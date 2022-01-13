@@ -132,7 +132,7 @@
             <p>COSAS AQUI DE LA TIENDA</p>
         </div>
         <?PHP
-        include("../Componentes/Footer/footer.php")
+        include("../Componentes/Footer/footer.php");
         ?>
     </section>
 

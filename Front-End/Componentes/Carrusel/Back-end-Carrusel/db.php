@@ -13,6 +13,8 @@ function insert_carrusel($titulo,$descripcion,$image){
     if ($titulo_2!="" && $descripcion_2!="" && $image_2!=""){
         if (ctype_alpha($titulo_2) && strlen($titulo_2)<15) {
             if (strlen($descripcion_2)<31) {
+                $titulo_2 = $titulo_2.";";
+                $descripcion_2 = $descripcion_2.";";
                 insert_carrusel($titulo_2,$descripcion_2,$image_2);
                 setcookie("correccion", "Datos validados", time()+10);
                 header('Location: index.php');

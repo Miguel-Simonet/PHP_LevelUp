@@ -22,28 +22,38 @@
     <?PHP
     //Declaracion de variables y queries------------------
       $con=mysqli_connect("localhost","root","","levelup");
-      $query='SELECT image from carrusel';
-      $imagen=mysqli_query($con,$query);
-      $resultado="";
-    //Interceptar la imagen de mysql y meterla en una variable resultado------------------
-      while ($row=$imagen->fetch_assoc()) {
-        $resultado.=$row['image'];
+      $query='SELECT * from carrusel';
+      $tabla=mysqli_query($con,$query);
+      $imagen="";
+      $titulo="";
+      $desc="";
+    //Interceptar la imagen de mysql y meterla en una variable imagen------------------
+      while ($fila=$tabla->fetch_assoc()) {
+        $imagen.=$fila['image'];
+        $titulo.= $fila['titulo'];
+        $desc.= $fila['descripcion'];
       }
     //Arreglar y adaptar los datos para poder mostrarlos luego-------------------
-      $resultado= explode(".jpg",$resultado);
-      foreach ($resultado as $key => $value) {
-        $resultado[$key]=$value.".jpg";
+      //IMAGEN---------------
+      $imagen= explode(".jpg",$imagen);
+      foreach ($imagen as $key => $value) {
+        $imagen[$key]=$value.".jpg";
       }
-      array_pop($resultado);
+      array_pop($imagen);
+      //TITULO---------------
+      $titulo = explode(";", $titulo);
+      //DESCRIPCION----------
+      $desc = explode(";", $desc);
     //Mostrar los datos------------------------------
-      print_r($resultado);
-      echo $resultado[0];
+      //print_r($imagen); <-- DEPURACION DE CODIGO
+      //echo $imagen[0];
+      print_r($titulo);
       echo "
-        <div class='carousel-item active'>
-          <img src='./imagen/".$resultado[0]."' class='d-block w-100' alt='...'>
+        <div class='carousel-item active'> "/* EL ACTIVE ES NECESARIO*/."
+          <img src='./imagen/".$imagen[0]."' class='d-block w-100' alt='...'>
           <div class='carousel-caption d-none d-md-block'>
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+            <h5>".$titulo[0]."</h5>
+            <p>".$desc[0]."</p>
           </div>
         </div>
       ";
@@ -51,10 +61,10 @@
       while ($a <= 2) {
         echo "
         <div class='carousel-item'>
-        <img src='./imagen/".$resultado[$a]."' class='d-block w-100' alt='...'>
+        <img src='./imagen/".$imagen[$a]."' class='d-block w-100' alt='...'>
         <div class='carousel-caption d-none d-md-block'>
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+          <h5>".$titulo[$a]."</h5>
+          <p>".$desc[$a]."</p>
         </div>
       </div>
         ";

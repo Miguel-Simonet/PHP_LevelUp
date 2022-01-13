@@ -35,7 +35,7 @@
       }
       array_pop($resultado);
       print_r($resultado);
-      echo $resultado[0];
+      echo $resultado[0]; 
       echo "
         <div class='carousel-item active'>
           <img src='./imagen/".$resultado[0]."' class='d-block w-100' alt='...'>

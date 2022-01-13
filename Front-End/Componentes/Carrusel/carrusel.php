@@ -48,6 +48,9 @@
       //print_r($imagen); <-- DEPURACION DE CODIGO
       //echo $imagen[0];
       print_r($titulo);
+      array_pop($resultado);
+      print_r($resultado);
+      echo $resultado[0]; 
       echo "
         <div class='carousel-item active'> "/* EL ACTIVE ES NECESARIO*/."
           <img src='./imagen/".$imagen[0]."' class='d-block w-100' alt='...'>

@@ -20,20 +20,22 @@
   </div>
   <div class="carousel-inner">
     <?PHP
+    //Declaracion de variables y queries------------------
       $con=mysqli_connect("localhost","root","","levelup");
-      $query='
-      SELECT image from carrusel
-      ';
+      $query='SELECT image from carrusel';
       $imagen=mysqli_query($con,$query);
       $resultado="";
+    //Interceptar la imagen de mysql y meterla en una variable resultado------------------
       while ($row=$imagen->fetch_assoc()) {
         $resultado.=$row['image'];
       }
+    //Arreglar y adaptar los datos para poder mostrarlos luego-------------------
       $resultado= explode(".jpg",$resultado);
       foreach ($resultado as $key => $value) {
         $resultado[$key]=$value.".jpg";
       }
       array_pop($resultado);
+    //Mostrar los datos------------------------------
       print_r($resultado);
       echo $resultado[0];
       echo "

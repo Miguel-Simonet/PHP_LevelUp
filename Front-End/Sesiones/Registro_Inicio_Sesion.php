@@ -442,15 +442,15 @@
           <div class="login-form">
             <div class="title">Iniciar Sesión</div>
             <!--FORMULARIO DE INICIAR SESION-->
-            <form action="#">
+            <form action="iniciar_sesion.php" method="post">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
-                  <input type="text" placeholder="Introduzca el email" required>
+                  <input name="email" type="text" placeholder="Introduzca el email" required>
                 </div>
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Introduzca la contraseña" required>
+                  <input name="contraseña" type="password" placeholder="Introduzca la contraseña" required>
                 </div>
                 <div class="text"><a href="#">Olvidaste tu contraseña?</a></div>
                 <div class="button input-box">
@@ -480,6 +480,11 @@
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
                   <input type="password" placeholder="Introduzca otra vez tu contraseña" name="contraseña2" required>
+                </div>
+                <div style="align-items: center;" id="emailHelp" class="form-text mx-auto">
+                  <?=
+                  isset($_COOKIE["problema"]) ? $_COOKIE["problema"] : ""; 
+                  ?>
                 </div>
                 <div class="button input-box">
                   <input type="submit" value="Enviar">

@@ -112,7 +112,11 @@
                         <img src="https://th.bing.com/th/id/R.0b94498aa4863bed528f68b6192425e1?rik=YRNMkX4Zd%2bmzNw&pid=ImgRaw&r=0" alt="profileImg">
                     </div>
                     <div class="name-job">
-                        <div class="profile_name">Prem Shahi</div>
+                        <div class="profile_name">
+                        <?=
+                            isset($_COOKIE["sesion_iniciada"]) ? $_COOKIE["sesion_iniciada"] : ""; 
+                        ?>
+                        </div>
                         <div class="job">Web Desginer</div>
                     </div>
                     <i class='bx bx-log-out'></i>

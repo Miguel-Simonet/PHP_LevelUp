@@ -12,7 +12,7 @@ body{
   justify-content: center;
 }
 .container{
-  align-items: center;
+  margin-top: 7%;
   position: relative;
   max-width: 850px !important;
   width: 100% !important;

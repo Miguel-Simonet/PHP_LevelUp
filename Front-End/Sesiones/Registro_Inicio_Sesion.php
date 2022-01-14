@@ -441,6 +441,7 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Iniciar Sesión</div>
+            <!--FORMULARIO DE INICIAR SESION-->
             <form action="#">
               <div class="input-boxes">
                 <div class="input-box">
@@ -461,23 +462,24 @@
           </div>
           <div class="signup-form">
             <div class="title">Registrarse</div>
-            <form action="#">
+            <!--FORMULARIO DE REGISTRO-->
+            <form action="registro.php" method="POST">
               <div class="input-boxes">
                 <div class="input-box">
                   <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Introduzca el nombre" required>
+                  <input type="text" placeholder="Introduzca el nombre" name="nombre" required>
                 </div>
                 <div class="input-box">
                   <i class="fas fa-envelope"></i>
-                  <input type="text" placeholder="Introduzca tu email" required>
+                  <input type="text" placeholder="Introduzca tu email" name="email" required>
                 </div>
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Introduzca tu contraseña" required>
+                  <input type="password" placeholder="Introduzca tu contraseña" name="contraseña" required>
                 </div>
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
-                  <input type="password_2" placeholder="Introduzca otra vez tu contraseña" required>
+                  <input type="password" placeholder="Introduzca otra vez tu contraseña" name="contraseña2" required>
                 </div>
                 <div class="button input-box">
                   <input type="submit" value="Enviar">

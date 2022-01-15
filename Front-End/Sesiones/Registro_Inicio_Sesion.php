@@ -453,6 +453,11 @@
                   <input name="contraseña" type="password" placeholder="Introduzca la contraseña" required>
                 </div>
                 <div class="text"><a href="#">Olvidaste tu contraseña?</a></div>
+                <div style="align-items: center;" id="emailHelp" class="form-text mx-auto">
+                  <?=
+                  isset($_COOKIE["sesion_iniciada"]) ? $_COOKIE["sesion_iniciada"] : ""; 
+                  ?>
+                </div>
                 <div class="button input-box">
                   <input type="submit" value="Enviar">
                 </div>

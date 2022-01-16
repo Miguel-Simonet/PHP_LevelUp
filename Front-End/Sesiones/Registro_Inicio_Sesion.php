@@ -528,7 +528,7 @@ function CheckBox(){
   var cookie = getCookie("registrado");
   if (cookie = "TRUE"){
     alert(cookie);
-    //INSERTAR AQUI CODIGO PARA CHECKAR EL CHECKBOX "FLIP"
+    //document.getElementById("flip").checked = TRUE;
   }
 }
 </script>

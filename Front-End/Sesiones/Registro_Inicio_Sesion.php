@@ -492,7 +492,7 @@
                   ?>
                 </div>
                 <div class="button input-box">
-                  <input type="submit" value="Enviar">
+                  <input type="submit" value="Enviar" onclick="Check()">
                 </div>
                 <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Inicia sesión ahora</label></div>
               </div>
@@ -504,6 +504,35 @@
   </section>
 
 </body>
+<script>
+  function Check(){
+    var emailHelp = document.getElementById("emailHelp").value ;
+    if (emailHelp = "Usuario ya registrado."){
+      document.cookie = "registrado = TRUE";
+    }
+    CheckBox();
+  }
+//
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+      }
+    return null;
+  }
+//
+function CheckBox(){
+  var cookie = getCookie("registrado");
+  if (cookie = "TRUE"){
+    alert(cookie);
+    //INSERTAR AQUI CODIGO PARA CHECKAR EL CHECKBOX "FLIP"
+  }
+}
+</script>
+
 <script>
   let arrow = document.querySelectorAll(".arrow");
   for (var i = 0; i < arrow.length; i++) {

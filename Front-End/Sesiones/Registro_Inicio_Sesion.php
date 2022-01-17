@@ -489,7 +489,6 @@
                   <i class="fas fa-envelope"></i>
                   <input type="text" placeholder="Introduzca tu email" name="email" required>
                 </div>
-                <input type="checkbox" id="test">
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
                   <input type="password" placeholder="Introduzca tu contraseña" name="contraseña" required>
@@ -504,7 +503,7 @@
                   ?>
                 </div>
                 <div class="button input-box">
-                  <input type="submit" value="Enviar" onclick="Check()">
+                  <input type="submit" value="Enviar">
                 </div>
                 <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Inicia sesión ahora</label></div>
               </div>
@@ -517,14 +516,6 @@
 
 </body>
 <script>
-  /*function Check(){
-    var emailHelp = document.getElementById("emailHelp").value ;
-    if (emailHelp = "Usuario ya registrado."){
-      document.cookie = "registrado = TRUE";
-      CheckBox();
-    }
-  }
-  */
 //
 function getCookie(name) {
     var nameEQ = name + "=";
@@ -537,14 +528,6 @@ function getCookie(name) {
     return null;
   }
 //
-/*function CheckBox(){
-  var cookie = getCookie("registrado");
-  if (cookie = "TRUE"){
-    alert(cookie);
-    document.getElementById("test").checked = true;
-  }
-}
-*/
 var Cookie = getCookie("problema");
   if (Cookie == "Usuario+ya+registrado."){
     document.getElementById("flip").checked = true;

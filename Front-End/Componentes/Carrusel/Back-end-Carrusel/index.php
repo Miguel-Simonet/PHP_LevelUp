@@ -27,12 +27,12 @@
                         <div class="form-floating">
                             <textarea class="form-control" id="descripcion" name="descripcion" style="height: 100px"></textarea>
                             <label for="floatingTextarea2">Descripción</label>
+                            <div id="emailHelp" class="form-text">Descripción con una extension maxima a 30 caracteres.</div>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="formFileMultiple" class="form-label">Imagen</label>
                         <input class="form-control" type="file" id="imagen" name="imagen" multiple>
-                        <div id="emailHelp" class="form-text">Descripción con una extension maxima a 30 caracteres.</div>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <button class="btn btn-secondary" type="submit">Button</button>

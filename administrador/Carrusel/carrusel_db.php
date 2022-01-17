@@ -16,22 +16,18 @@ function insert_carrusel($titulo,$descripcion,$image){
                 $titulo_2 = $titulo_2.";";
                 $descripcion_2 = $descripcion_2.";";
                 insert_carrusel($titulo_2,$descripcion_2,$image_2);
-                setcookie("correccion", "Datos validados", time()+10,"/");
-                header('Location: index.php');
+                setcookie("correccion_carrusel", "Datos validados", time()+10,"/");
+                header('Location: ../menu.php');
             }else {
-                setcookie("correccion", "La longitud de descripcion tiene que ser menor a 30 caracteres", time()+10,"/");
-                header('Location: index.php');
+                setcookie("correccion_carrusel", "La longitud de descripcion tiene que ser menor a 30 caracteres", time()+10,"/");
+                header('Location: ../menu.phpp');
             }
         }else {
-            setcookie("correccion","Solo se puede usar en el titulo letras y tiene que tener una longitud menor a 15 caracteres", time()+10,"/");
-            header('Location: index.php');
+            setcookie("correccion_carrusel","Solo se puede usar en el titulo letras y tiene que tener una longitud menor a 15 caracteres", time()+10,"/");
+            header('Location: ../menu.php');
         }
     }else{
-        setcookie("correccion", "Algun campo vacio", time()+10,"/");
-        header('Location: index.php');
+        setcookie("correccion_carrusel", "Algun campo vacio", time()+10,"/");
+        header('Location: ../menu.php');
     }
     
-    $mysql= mysql_levelUp();
-    $delete_id=$_POST['delete'];
-    $mysql->query("delete from carrusel where id=$delete_id;");
-    header('Location: index.php');

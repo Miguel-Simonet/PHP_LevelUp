@@ -14,7 +14,7 @@ if ($email!=="admin" && $contraseña!==1234) {
         if($email==$row['email'] && $contraseña==$row['contraseña'] ) {
             $_SESSION["sesion_iniciada_2"]="$usuario";
             setcookie("sesion_iniciada_3", "$usuario", time() +1314000, "/");
-            echo $_SESSION["sesion_iniciada_2"];
+            //echo $_SESSION["sesion_iniciada_2"];
             header('Location: ../Pagina_Principal/index.php');  
       
         }else {
@@ -24,6 +24,7 @@ if ($email!=="admin" && $contraseña!==1234) {
         }
     }
 }else {
+    setcookie("admin", "admin", time() +1314000, "/");
     header("Location:../../administrador/menu.php");
 }
 

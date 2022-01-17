@@ -1,7 +1,3 @@
-<?php
-// Start the session
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +12,11 @@ session_start();
     include("../Boostrap_Thinks/boostrap.php");
     ?>
 </head>
-
+<style>
+    body {
+        background-color: #E4E9F7;
+    }
+</style>
 
 <body>
     <!--Navbar Inicio-->
@@ -75,59 +75,24 @@ session_start();
                 </ul>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bx-edit-alt'></i>
-                    <span class="link_name">Crear Ventas</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Crear Ventas</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-wrench'></i>
-                    <span class="link_name">Gestionar Ventas</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Gestionar Ventas</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-compass'></i>
-                    <span class="link_name">Explorador</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Explorador</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-cog'></i>
-                    <span class="link_name">Ajustes</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Ajustes</a></li>
-                </ul>
-            </li>
-            <li>
                 <div class="profile-details">
                     <div class="profile-content">
                         <img src="https://th.bing.com/th/id/R.0b94498aa4863bed528f68b6192425e1?rik=YRNMkX4Zd%2bmzNw&pid=ImgRaw&r=0" alt="profileImg">
                     </div>
                     <div class="name-job">
                         <div class="profile_name">Usuario</div>
-                        <div class="job">  
-                        Administrador
+                        <div class="job">
+                            Administrador
                         </div>
                     </div>
                     <script>
-                        function delCoockie(){
+                        function delCoockie() {
+                            document.cookie = "admin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
                             window.location.href = "../Front-End/Pagina_principal/index.php";
                         }
                     </script>
                     <i onclick="delCoockie()" class='bx bx-log-out'></i>
-                    
+
                 </div>
             </li>
         </ul>
@@ -137,10 +102,205 @@ session_start();
             <i class='bx bx-menu'></i>
             <span class="text">LevelUp Boosting</span>
         </div>
-        <div>
-            <p>COSAS AQUI DE LA TIENDA</p>
+        <form action="Carrusel/carrusel_db.php" method="post">
+            <div class="position-relative">
+                <div class="card mx-auto mt-4 " style="max-width: 470px; align-items:center;">
+                    <div class="card-body">
+                        <h5 class="card-title">Formulario carrusel</h5>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Titulo</label>
+                            <input type="name" class="form-control" id="titulo" name="titulo">
+                            <div id="emailHelp" class="form-text">Titulo solo con letras y menor a 15 caracteres.</div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="descripcion" name="descripcion" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">Descripción</label>
+                                <div id="emailHelp" class="form-text">Descripción con una extension maxima a 30 caracteres.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Imagen</label>
+                            <input class="form-control" type="file" id="imagen" name="imagen" multiple>
 
-        </div>
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-secondary" type="submit">Button</button>
+                            <div id="emailHelp" class="form-text mx-auto">
+                                <?= isset($_COOKIE["correccion_carrusel"]) ? $_COOKIE["correccion_carrusel"] : ""; ?>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+        </form>
+
+        <form action="League_of_Legends/cuentas_lol.php" method="post">
+            <div class="position-relative">
+                <div class="card mx-auto mt-4 " style="max-width: 470px; align-items:center;">
+                    <div class="card-body">
+                        <h5 class="card-title">Formulario League of Legends</h5>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre de la cuenta</label>
+                            <input type="name" class="form-control" id="Nombre_cuenta" name="Nombre_cuenta_lol">
+                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Region</label>
+                            <select name="region_lol" class="form-select" aria-label="Default select example">
+                                <option value="">EU Oeste</option>
+                                <option value="">EU nordica y Este</option>
+                                <option value="">Japón</option>
+                                <option value="">Latino América Norte</option>
+                                <option value="">Latino América Sur</option>
+                                <option value="">NorteAmérica</option>
+                                <option value="">Oceanía</option>
+                                <option value="">Rusia</option>
+                                <option value="">Turquía</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Rango en el juego actual</label>
+                            <select name="rango_lol" class="form-select" aria-label="Default select example">
+                                <option value="">Hierro</option>
+                                <option value="">Plata</option>
+                                <option value="">Oro</option>
+                                <option value="">Platino</option>
+                                <option value="">Diamante</option>
+                                <option value="">Master</option>
+                                <option value="">Gran Master</option>
+                                <option value="">Challenger</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Precio de la venta</label>
+                            <input type="number" class="form-control" id="precio" name="precio_lol">
+                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-secondary" type="submit">Button</button>
+                        <div id="emailHelp" class="form-text mx-auto">
+                            <?= isset($_COOKIE["correccion_carrusel"]) ? $_COOKIE["correccion_carrusel"] : ""; ?>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </form>
+
+        <form action="League_of_Legends/cuentas_lol.php" method="post">
+            <div class="position-relative">
+                <div class="card mx-auto mt-4 " style="max-width: 470px; align-items:center;">
+                    <div class="card-body">
+                        <h5 class="card-title">Formulario Valorant</h5>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre de la cuenta</label>
+                            <input type="name" class="form-control" id="Nombre_cuenta" name="Nombre_cuenta_valorant">
+                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Region</label>
+                            <select name="region_valorant" class="form-select" aria-label="Default select example">
+                                <option value="">EU Oeste</option>
+                                <option value="">EU nordica y Este</option>
+                                <option value="">Japón</option>
+                                <option value="">Latino América Norte</option>
+                                <option value="">Latino América Sur</option>
+                                <option value="">NorteAmérica</option>
+                                <option value="">Oceanía</option>
+                                <option value="">Rusia</option>
+                                <option value="">Turquía</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Rango en el juego actual</label>
+                            <select name="rango_valorant" class="form-select" aria-label="Default select example">
+                                <option value="">Hierro</option>
+                                <option value="">Plata</option>
+                                <option value="">Oro</option>
+                                <option value="">Platino</option>
+                                <option value="">Diamante</option>
+                                <option value="">Inmortal</option>
+                                <option value="">Radiante</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Precio de la venta</label>
+                            <input type="number" class="form-control" id="precio" name="precio_valorant">
+                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-secondary" type="submit">Button</button>
+                        <div id="emailHelp" class="form-text mx-auto">
+                            <?= isset($_COOKIE["correccion_carrusel"]) ? $_COOKIE["correccion_carrusel"] : ""; ?>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </form>
+        <form action="League_of_Legends/cuentas_lol.php" method="post">
+            <div class="position-relative">
+                <div class="card mx-auto mt-4 " style="max-width: 470px; align-items:center;">
+                    <div class="card-body">
+                        <h5 class="card-title">Formulario Overwatch</h5>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre de la cuenta</label>
+                            <input type="name" class="form-control" id="Nombre_cuenta" name="Nombre_cuenta_overwatch">
+                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Region</label>
+                            <select name="region" class="form-select" aria-label="Default select example">
+                                <option value="">EU Oeste</option>
+                                <option value="">EU nordica y Este</option>
+                                <option value="">Japón</option>
+                                <option value="">Latino América Norte</option>
+                                <option value="">Latino América Sur</option>
+                                <option value="">NorteAmérica</option>
+                                <option value="">Oceanía</option>
+                                <option value="">Rusia</option>
+                                <option value="">Turquía</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Rango en el juego actual</label>
+                            <select name="rango_overwatch" class="form-select" aria-label="Default select example">
+                                <option value="">Hierro</option>
+                                <option value="">Plata</option>
+                                <option value="">Oro</option>
+                                <option value="">Platino</option>
+                                <option value="">Diamante</option>
+                                <option value="">Master</option>
+                                <option value="">Gran Master</option>
+                                <option value="">Top 500</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Precio de la venta</label>
+                            <input type="number" class="form-control" id="precio" name="precio_overwatch">
+                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-secondary" type="submit">Button</button>
+                        <div id="emailHelp" class="form-text mx-auto">
+                            <?= isset($_COOKIE["correccion_carrusel"]) ? $_COOKIE["correccion_carrusel"] : ""; ?>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </form>
 
     </section>
 

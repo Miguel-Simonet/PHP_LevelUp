@@ -489,6 +489,7 @@
                   <i class="fas fa-envelope"></i>
                   <input type="text" placeholder="Introduzca tu email" name="email" required>
                 </div>
+                <input type="checkbox" id="test">
                 <div class="input-box">
                   <i class="fas fa-lock"></i>
                   <input type="password" placeholder="Introduzca tu contraseña" name="contraseña" required>
@@ -545,7 +546,7 @@ function getCookie(name) {
 }
 */
 var Cookie = getCookie("problema");
-  if (Cookie = "Usuario+ya+registrado."){
+  if (Cookie == "Usuario+ya+registrado."){
     document.getElementById("flip").checked = true;
   }
 </script>

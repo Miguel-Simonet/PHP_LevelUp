@@ -13,14 +13,14 @@ $select_email= mysqli_query($conn, $query_email);
 
 if ($password==$password_2) {
     if ($select_email->num_rows >'0') {
-        setcookie("problema", "Usuario ya registrado.", time()+10);
+        setcookie("problema", "Usuario ya registrado.", time()+100, "/");
         header('Location: Registro_Inicio_Sesion.php');
     }else{
         $insert_user = mysqli_query($conn, $query_insert);;
-        setcookie("problema", "Usuario registrado correctamente.", time()+10);
+        setcookie("problema", "Usuario registrado correctamente.", time()+100, "/");
     }
 }else{
-    setcookie("problema", "Las contraseñas no coinciden.", time()+10);
+    setcookie("problema", "Las contraseñas no coinciden.", time()+100, "/");
     header('Location: Registro_Inicio_Sesion.php');
 }
 

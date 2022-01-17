@@ -8,18 +8,23 @@ $select_usuario = mysqli_query($conn, $query_usuario);
 
 
 
-while ($row = mysqli_fetch_assoc($select_usuario)) {
-    $usuario=$row['usuario'];
-    if($email==$row['email'] && $contraseña==$row['contraseña'] ) {
-        setcookie("sesion_iniciada", "$usuario");
-        header('Location: ../Pagina_Principal/index.php');
-
-        
-    }else {
-        setcookie("sesion_iniciada", "El email no existe o no coincide con la contraseña.", time()+10);
-        header('Location: Registro_Inicio_Sesion.php');
-
+if ($email!=="admin" && $contraseña!==1234) {
+    while ($row = mysqli_fetch_assoc($select_usuario)) {
+        $usuario=$row['usuario'];
+        if($email==$row['email'] && $contraseña==$row['contraseña'] ) {
+            $_SESSION["sesion_iniciada_2"]="$usuario";
+            setcookie("sesion_iniciada_3", "$usuario", time() +1314000, "/");
+            echo $_SESSION["sesion_iniciada_2"];
+            header('Location: ../Pagina_Principal/index.php');  
+      
+        }else {
+            setcookie("sesion_iniciada", "El email no existe o no coincide con la contraseña.", time()+10);
+            header('Location: Registro_Inicio_Sesion.php');
+    
+        }
     }
+}else {
+    header("Location:../../administrador/menu.php");
 }
 
 

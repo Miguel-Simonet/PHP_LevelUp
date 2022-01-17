@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./CSS/sesion.css ">
   <?php
-      include("../../Boostrap_Thinks/boostrap.php");
+  include("../../Boostrap_Thinks/boostrap.php");
   ?>
 </head>
 <style !important>
@@ -405,10 +405,21 @@
             <img src="https://th.bing.com/th/id/R.0b94498aa4863bed528f68b6192425e1?rik=YRNMkX4Zd%2bmzNw&pid=ImgRaw&r=0" alt="profileImg">
           </div>
           <div class="name-job">
-            <div class="profile_name">Prem Shahi</div>
-            <div class="job">Web Desginer</div>
+            <div class="profile_name">Usuario</div>
+            <div class="job">
+              <?=
+              isset($_COOKIE["sesion_iniciada_3"]) ? $_COOKIE["sesion_iniciada_3"] : "<a href='./Registro_Inicio_Sesion.php'>Registrate</a>";
+              ?>
+            </div>
           </div>
-          <i class='bx bx-log-out'></i>
+          <script>
+            function delCoockie() {
+              console.log("Cosas");
+              document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+              location.reload();
+            }
+          </script>
+          <i onclick="delCoockie()" class='bx bx-log-out'></i>
         </div>
       </li>
     </ul>
@@ -455,7 +466,7 @@
                 <div class="text"><a href="#">Olvidaste tu contraseña?</a></div>
                 <div style="align-items: center;" id="emailHelp" class="form-text mx-auto">
                   <?=
-                  isset($_COOKIE["sesion_iniciada"]) ? $_COOKIE["sesion_iniciada"] : ""; 
+                  isset($_COOKIE["sesion_iniciada"]) ? $_COOKIE["sesion_iniciada"] : "";
                   ?>
                 </div>
                 <div class="button input-box">
@@ -488,7 +499,7 @@
                 </div>
                 <div style="align-items: center;" id="emailHelp" class="form-text mx-auto">
                   <?=
-                  isset($_COOKIE["problema"]) ? $_COOKIE["problema"] : ""; 
+                  isset($_COOKIE["problema"]) ? $_COOKIE["problema"] : "";
                   ?>
                 </div>
                 <div class="button input-box">
@@ -505,15 +516,16 @@
 
 </body>
 <script>
-  function Check(){
+  /*function Check(){
     var emailHelp = document.getElementById("emailHelp").value ;
     if (emailHelp = "Usuario ya registrado."){
       document.cookie = "registrado = TRUE";
+      CheckBox();
     }
-    CheckBox();
   }
+  */
 //
-  function getCookie(name) {
+function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -524,13 +536,18 @@
     return null;
   }
 //
-function CheckBox(){
+/*function CheckBox(){
   var cookie = getCookie("registrado");
   if (cookie = "TRUE"){
     alert(cookie);
-    //document.getElementById("flip").checked = TRUE;
+    document.getElementById("test").checked = true;
   }
 }
+*/
+var Cookie = getCookie("problema");
+  if (Cookie = "Usuario+ya+registrado."){
+    document.getElementById("flip").checked = true;
+  }
 </script>
 
 <script>

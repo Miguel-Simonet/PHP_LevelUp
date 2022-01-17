@@ -10,10 +10,10 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS/navbar.css">
-    <script defer src="./JS/navbar.js"></script>
+    <link rel="stylesheet" href="../Front-End/Pagina_Principal/CSS/navbar.css">
+    <script defer src="../Front-End/Pagina_Principal/JS/navbar.js"></script>
     <?php
-    include("../../Boostrap_Thinks/boostrap.php");
+    include("../Boostrap_Thinks/boostrap.php");
     ?>
 </head>
 
@@ -118,18 +118,13 @@ session_start();
                     <div class="name-job">
                         <div class="profile_name">Usuario</div>
                         <div class="job">  
-                        <?=
-                            isset($_COOKIE["sesion_iniciada_3"]) ? $_COOKIE["sesion_iniciada_3"] : "<a href='../Sesiones/Registro_Inicio_Sesion.php'>Registrate</a>";
-                        ?>
+                        Administrador
                         </div>
                     </div>
                     <script>
                         function delCoockie(){
-                            console.log("Cosas");
-                            document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                            location.reload();
+                            window.location.href = "../Front-End/Pagina_principal/index.php";
                         }
-                        
                     </script>
                     <i onclick="delCoockie()" class='bx bx-log-out'></i>
                     
@@ -142,16 +137,11 @@ session_start();
             <i class='bx bx-menu'></i>
             <span class="text">LevelUp Boosting</span>
         </div>
-        <?PHP
-        include("../Componentes/Carrusel/carrusel.php");
-        ?>
         <div>
             <p>COSAS AQUI DE LA TIENDA</p>
 
         </div>
-        <?PHP
-        include("../Componentes/Footer/footer.php");
-        ?>
+
     </section>
 
 </body>

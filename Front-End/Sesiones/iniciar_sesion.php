@@ -24,7 +24,7 @@ if ($email!=="admin" && $contraseña!==1234) {
         }
     }
 }else {
-    setcookie("admin", "admin", time() +1314000, "/");
+    setcookie("usuario", "admin", time() +1314000, "/");
     header("Location:../../administrador/menu.php");
 }
 

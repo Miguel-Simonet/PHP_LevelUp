@@ -42,6 +42,9 @@
                         <span class="link_name">Carrusel</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Carrusel</a></li>
+                </ul>
             </li>
             <li>
                 <div class="iocn-link">
@@ -50,6 +53,9 @@
                         <span class="link_name">LoL</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Lol</a></li>
+                </ul>
             </li>
             <li>
                 <div class="iocn-link">
@@ -58,6 +64,9 @@
                         <span class="link_name">Valorant</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Valorant</a></li>
+                </ul>
             </li>
             <li>
                 <a href="../Overwatch/tabla_overwatch.php">
@@ -96,7 +105,47 @@
             <i class='bx bx-menu'></i>
             <span class="text">LevelUp Boosting</span>
         </div>
-
+        <?php
+        $conn = new mysqli("localhost", "root", "", "levelup");
+        $query = "SELECT * FROM lol";
+        $select = mysqli_query($conn, $query);
+        //
+        $chequeo = mysqli_num_rows($select);
+        echo "<h1 style='margin-top:1%'>Datos de cuentas League of Legends</h1>";
+        echo "<div>";
+        if ($chequeo > 0) {
+            echo
+            "<table class='table'>
+                    <tr>
+                        <th scope='col'>Nombre</th>
+                        <th scope='col'>Region</th>
+                        <th scope='col'>Rango</th>
+                        <th scope='col'>Precio</th>
+                        <th scope='col'>Usuario propietario</th>
+                    </tr>";
+            while ($row = mysqli_fetch_assoc($select)) {
+                //for loop better than this line
+                echo "<tr>
+                    <td>" . $row['nombre_de_cuenta'] . "</td>
+                    <td>" . $row['region'] . "</td>
+                    <td>" . $row['rango'] . "</td>
+                    <td>" . $row['precio'] . "</td>
+                    <td>" . $row['usuario_propietario'] . "</td>
+                    <td>
+                        <form method='post' action='delete_lol.php'>
+                            <input id='delete' type='hidden' class='btn btn-danger' name='delete' value=" . $row['nombre_de_cuenta'] . "></input>
+                            <button type='submit' class='btn btn-danger'>Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                ";
+            }
+            echo "</table></div>";
+        } else {
+            echo "No results<br>";
+        }
+        mysqli_close($conn);
+        ?>
     </section>
 
 </body>

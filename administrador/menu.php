@@ -42,6 +42,9 @@
                         <span class="link_name">Carrusel</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Carrusel</a></li>
+                </ul>
             </li>
             <li>
                 <div class="iocn-link">
@@ -50,6 +53,9 @@
                         <span class="link_name">LoL</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Lol</a></li>
+                </ul>
             </li>
             <li>
                 <div class="iocn-link">
@@ -58,6 +64,9 @@
                         <span class="link_name">Valorant</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Valorant</a></li>
+                </ul>
             </li>
             <li>
                 <a href="./Overwatch/tabla_overwatch.php">

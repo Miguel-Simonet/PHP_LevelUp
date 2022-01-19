@@ -42,6 +42,9 @@
                         <span class="link_name">Carrusel</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Carrusel</a></li>
+                </ul>
             </li>
             <li>
                 <div class="iocn-link">
@@ -50,6 +53,9 @@
                         <span class="link_name">LoL</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Lol</a></li>
+                </ul>
             </li>
             <li>
                 <div class="iocn-link">
@@ -58,6 +64,9 @@
                         <span class="link_name">Valorant</span>
                     </a>
                 </div>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Valorant</a></li>
+                </ul>
             </li>
             <li>
                 <a href="../Overwatch/tabla_overwatch.php">
@@ -96,7 +105,47 @@
             <i class='bx bx-menu'></i>
             <span class="text">LevelUp Boosting</span>
         </div>
-
+        <?php
+        $conn = new mysqli("localhost", "root", "", "levelup");
+        $query = "SELECT * FROM carrusel";
+        $select = mysqli_query($conn, $query);
+        //
+        $chequeo = mysqli_num_rows($select);
+        echo "<h1 style='margin-top:1%'>Datos de cuentas Valorant</h1>";
+        echo "<div>";
+        if ($chequeo > 0) {
+            echo
+            "<table class='table'>
+                    <tr>
+                        <th scope='col'>Id</th>
+                        <th scope='col'>Titulo</th>
+                        <th scope='col'>Descripcion</th>
+                        <th scope='col'>Imagen</th>
+                        <th scope='col'>Fecha</th>
+                    </tr>";
+            while ($row = mysqli_fetch_assoc($select)) {
+                //for loop better than this line
+                echo "<tr>
+                    <td>" . $row['id'] . "</td>
+                    <td>" . $row['titulo'] . "</td>
+                    <td>" . $row['descripcion'] . "</td>
+                    <td>" . $row['image'] . "</td>
+                    <td>" . $row['created_at'] . "</td>
+                    <td>
+                        <form method='post' action='delete_carrusel.php'>
+                            <input id='delete' type='hidden' class='btn btn-danger' name='delete' value=" . $row['id'] . "></input>
+                            <button type='submit' class='btn btn-danger'>Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                ";
+            }
+            echo "</table></div>";
+        } else {
+            echo "No results<br>";
+        }
+        mysqli_close($conn);
+        ?>
     </section>
 
 </body>

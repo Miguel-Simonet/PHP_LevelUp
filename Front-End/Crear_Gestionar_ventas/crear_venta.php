@@ -1,7 +1,3 @@
-<?php
-// Start the session
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,13 +6,17 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS/navbar.css">
-    <script defer src="./JS/navbar.js"></script>
+    <link rel="stylesheet" href="../../Front-End/Pagina_Principal/CSS/navbar.css">
+    <script defer src="../../Front-End/Pagina_Principal/JS/navbar.js"></script>
     <?php
     include("../../Boostrap_Thinks/boostrap.php");
     ?>
 </head>
-
+<style>
+    body {
+        background-color: #E4E9F7;
+    }
+</style>
 
 <body>
     <!--Navbar Inicio-->
@@ -27,7 +27,7 @@ session_start();
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#">
+                <a href="../Pagina_Principal/index.php">
                     <i class='bx bx-home-alt'></i>
                     <span class="link_name">Inicio</span>
                 </a>
@@ -127,7 +127,7 @@ session_start();
                         function delCoockie(){
                             console.log("Cosas");
                             document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                            location.reload();
+                            window.location.href = "../Pagina_Principal/index.php";
                         }
                         
                     </script>
@@ -142,16 +142,7 @@ session_start();
             <i class='bx bx-menu'></i>
             <span class="text">LevelUp Boosting</span>
         </div>
-        <?PHP
-        include("../Componentes/Carrusel/carrusel.php");
-        ?>
-        <div>
-            <p>COSAS AQUI DE LA TIENDA</p>
 
-        </div>
-        <?PHP
-        include("../Componentes/Footer/footer.php");
-        ?>
     </section>
 
 </body>

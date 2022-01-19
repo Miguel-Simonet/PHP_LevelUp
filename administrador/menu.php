@@ -180,7 +180,7 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Precio de la venta</label>
                             <input type="number" class="form-control" id="precio" name="precio_lol">
-                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                            <div id="emailHelp" class="form-text"></div>
                         </div>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
@@ -235,7 +235,7 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Precio de la venta</label>
                             <input type="number" class="form-control" id="precio" name="precio_valorant">
-                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                            <div id="emailHelp" class="form-text"></div>
                         </div>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
@@ -290,7 +290,7 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Precio de la venta</label>
                             <input type="number" class="form-control" id="precio" name="precio_overwatch">
-                            <div id="emailHelp" class="form-text">Tiene que ser el nombre de la cuenta del invocador</div>
+                            <div id="emailHelp" class="form-text"></div>
                         </div>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">

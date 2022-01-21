@@ -363,6 +363,7 @@
           <li><a class="link_name" href="#">Overwatch</a></li>
         </ul>
       </li>
+      <!--
       <li>
         <a href="#">
           <i class='bx bx-edit-alt'></i>
@@ -381,6 +382,7 @@
           <li><a class="link_name" href="#">Gestionar Ventas</a></li>
         </ul>
       </li>
+-->
       <li>
         <a href="#">
           <i class='bx bx-compass'></i>
@@ -390,6 +392,7 @@
           <li><a class="link_name" href="#">Explorador</a></li>
         </ul>
       </li>
+      <!--
       <li>
         <a href="#">
           <i class='bx bx-cog'></i>
@@ -399,6 +402,7 @@
           <li><a class="link_name" href="#">Ajustes</a></li>
         </ul>
       </li>
+-->
       <li>
         <div class="profile-details">
           <div class="profile-content">

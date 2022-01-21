@@ -233,7 +233,7 @@
         </div>
         <div class="container">
             <div class="copyright"> © Copyright <strong><span>DevVE</span></strong>. All Rights Reserved </div>
-            <div class="credits"> Diseñado por<a href="#">LevelUp Corporation/a> </div>
+            <div class="credits"> Diseñado por<a href="#">LevelUp Corporation</a> </div>
         </div>
     </footer>
 </body>

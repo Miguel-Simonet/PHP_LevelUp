@@ -74,24 +74,31 @@ session_start();
                     <li><a class="link_name" href="#">Overwatch</a></li>
                 </ul>
             </li>
+            <?php
+            if (isset($_COOKIE['sesion_iniciada_3'])){
+                echo "
             <li>
-                <a href="../Crear_Gestionar_ventas/crear_venta.php">
+                <a href='../Crear_Gestionar_ventas/crear_venta.php'>
                     <i class='bx bx-edit-alt'></i>
-                    <span class="link_name">Crear Ventas</span>
+                    <span class='link_name'>Crear Ventas</span>
                 </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Crear Ventas</a></li>
+                <ul class='sub-menu blank'>
+                    <li><a class='link_name' href='#'>Crear Ventas</a></li>
                 </ul>
             </li>
+
             <li>
-                <a href="#">
+                <a href='#'>
                     <i class='bx bx-wrench'></i>
-                    <span class="link_name">Gestionar Ventas</span>
+                    <span class='link_name'>Gestionar Ventas</span>
                 </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Gestionar Ventas</a></li>
+                <ul class='sub-menu blank'>
+                    <li><a class='link_name' href='#'>Gestionar Ventas</a></li>
                 </ul>
             </li>
+                ";
+            }
+            ?>
             <li>
                 <a href="#">
                     <i class='bx bx-compass'></i>
@@ -101,15 +108,20 @@ session_start();
                     <li><a class="link_name" href="#">Explorador</a></li>
                 </ul>
             </li>
+            <?php
+            if (isset($_COOKIE['sesion_iniciada_3'])){
+                echo "
             <li>
-                <a href="#">
+                <a href='#'>
                     <i class='bx bx-cog'></i>
-                    <span class="link_name">Ajustes</span>
+                    <span class='link_name'>Ajustes</span>
                 </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Ajustes</a></li>
+                <ul class='sub-menu blank'>
+                    <li><a class='link_name' href='#'>Ajustes</a></li>
                 </ul>
             </li>
+            ";}
+            ?>
             <li>
                 <div class="profile-details">
                     <div class="profile-content">

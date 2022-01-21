@@ -37,7 +37,7 @@
             </li>
             <li>
                 <div class="iocn-link">
-                    <a href="#">
+                    <a href="">
                         <i class='bx bx-collection'></i>
                         <span class="link_name">LoL</span>
                     </a>
@@ -117,22 +117,21 @@
                     </div>
                     <div class="name-job">
                         <div class="profile_name">Usuario</div>
-                        <div class="job">  
-                        <?=
+                        <div class="job">
+                            <?=
                             isset($_COOKIE["sesion_iniciada_3"]) ? $_COOKIE["sesion_iniciada_3"] : "<a href='../Sesiones/Registro_Inicio_Sesion.php'>Registrate</a>";
-                        ?>
+                            ?>
                         </div>
                     </div>
                     <script>
-                        function delCoockie(){
+                        function delCoockie() {
                             console.log("Cosas");
                             document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
                             window.location.href = "../Pagina_Principal/index.php";
                         }
-                        
                     </script>
                     <i onclick="delCoockie()" class='bx bx-log-out'></i>
-                    
+
                 </div>
             </li>
         </ul>
@@ -142,7 +141,37 @@
             <i class='bx bx-menu'></i>
             <span class="text">LevelUp Boosting</span>
         </div>
-
+        <div id="menu">
+            <div class="card bg-dark text-white">
+                <img src="../Componentes/Carrusel/imagen/35fSxcr__400x400.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+            </div>
+            <div class="card bg-dark text-white">
+                <img src="../Componentes/Carrusel/imagen/35fSxcr__400x400.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+            </div>
+            <div class="card bg-dark text-white">
+                <img src="../Componentes/Carrusel/imagen/35fSxcr__400x400.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <?PHP
+            include("../Componentes/Footer/footer.php");
+            ?>
+        </div>
     </section>
 
 </body>

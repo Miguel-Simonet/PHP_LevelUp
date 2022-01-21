@@ -18,6 +18,20 @@
     }
 </style>
 <script>
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    var cookie_lol = getCookie("correccion_lol");
+    var cookie_ow = getCookie("correccion_overwatch");
+    var cookie_val = getCookie("correccion_valorant");
+
     function Ocultar_Tarjeta_1() {
         document.getElementById("menu").style.display = "none";
         document.getElementById("lol_formulario").style.display = "";
@@ -33,23 +47,39 @@
         document.getElementById("menu").style.display = "none";
         document.getElementById("overwatch_formulario").style.display = "";
     }
+
     function Mostrar_Tarjeta_1() {
         document.getElementById("lol_formulario").style.display = "none";
         document.getElementById("menu").style.display = "";
-        
+
 
     }
 
     function Mostrar_Tarjeta_2() {
         document.getElementById("valorant_formulario").style.display = "none";
         document.getElementById("menu").style.display = "";
-        
+
     }
 
     function Mostrar_Tarjeta_3() {
         document.getElementById("overwatch_formulario").style.display = "none";
         document.getElementById("menu").style.display = "";
-        
+
+    }
+    if ((cookie_lol != null) && (cookie_lol!="Datos+validados") && (cookie_lol!="Datos%20validados")) {
+        setTimeout(function() {
+            Ocultar_Tarjeta_1();
+        }, 1)
+    }
+    if ((cookie_val != null) && (cookie_val!="Datos+validados") && (cookie_val!="Datos%20validados")) {
+        setTimeout(function() {
+            Ocultar_Tarjeta_2();
+        }, 1)
+    }
+    if ((cookie_ow != null) && (cookie_ow!="Datos+validados") && (cookie_ow!="Datos%20validados")) {
+        setTimeout(function() {
+            Ocultar_Tarjeta_3();
+        }, 1)
     }
 </script>
 
@@ -177,15 +207,15 @@
             <span class="text">LevelUp Boosting</span>
         </div>
         <div style="margin-top: 1%;margin-bottom:1%;" id="menu">
-            <div class="row justify-content-center">
+            <div style="margin-right: 0;" class="row justify-content-center">
                 <div class="col-sm-3">
                     <a onclick="Ocultar_Tarjeta_1()" href="#">
                         <div class="card bg-dark text-white" style="max-width: 540px;">
-                            <img src="../Crear_Gestionar_ventas/Imagenes/71JWVVP3nWL.jpg" class="card-img" alt="...">
+                            <img style="height:564px;" src="../Crear_Gestionar_ventas/Imagenes/EGS_LeagueofLegends_RiotGames_S2_1200x1600-7fd64f0f7b674900bdd172967865d545.jpg" class="card-img" alt="...">
                             <div class="card-img-overlay">
-                                <h5 class="card-title">League of Legends</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text">Last updated 3 mins ago</p>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </a>
@@ -195,9 +225,9 @@
                         <div class="card bg-dark text-white" style="max-width: 540px;">
                             <img style="height:564px;" src="../Crear_Gestionar_ventas/Imagenes/open-graph-2e582ae9fae8b0b396ca46ff21fd47a8.jpg" class="card-img" alt="...">
                             <div class="card-img-overlay">
-                                <h5 class="card-title">Valorant</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text">Last updated 3 mins ago</p>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </a>
@@ -205,11 +235,11 @@
                 <div class="col-sm-3">
                     <a onclick="Ocultar_Tarjeta_3()" href="#">
                         <div class="card bg-dark text-white" style="max-width: 540px;">
-                            <img style="height:564px;" src="../Crear_Gestionar_ventas/Imagenes/overwatch.png" class="card-img" alt="...">
+                            <img style="height:564px;" src="../Crear_Gestionar_ventas/Imagenes/X1Jk2NuMWbQeBZag6_jsUOtTaN0NnMjcoBEQ45tM9iY_350x200_3x-0.jpeg" class="card-img" alt="...">
                             <div class="card-img-overlay">
-                                <h5 class="card-title">Overwatch</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text">Last updated 3 mins ago</p>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text"></p>
+                                <p class="card-text"></p>
                             </div>
                         </div>
                     </a>
@@ -219,7 +249,7 @@
         <div style="display: none;" id="lol_formulario">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <a onclick="Mostrar_Tarjeta_1()" href="#"><img src="./Imagenes/71JWVVP3nWL.jpg" class="img-fluid rounded-start" alt="..."></a>
+                    <a onclick="Mostrar_Tarjeta_1()" href="#"><img src="./Imagenes/EGS_LeagueofLegends_RiotGames_S2_1200x1600-7fd64f0f7b674900bdd172967865d545.jpg" class="img-fluid rounded-start" alt="..."></a>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -314,7 +344,7 @@
         <div style="display: none;" id="overwatch_formulario">
             <div class="row g-0">
                 <div class="col-md-4">
-                   <a onclick="Mostrar_Tarjeta_3()" href="#"><img src="./Imagenes/overwatch.png" class="img-fluid rounded-start" alt="..."></a>
+                    <a onclick="Mostrar_Tarjeta_3()" href="#"><img src="./Imagenes/X1Jk2NuMWbQeBZag6_jsUOtTaN0NnMjcoBEQ45tM9iY_350x200_3x-0.jpeg" class="img-fluid rounded-start" alt="..."></a>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">

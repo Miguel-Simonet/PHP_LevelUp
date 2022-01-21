@@ -15,7 +15,7 @@ $mysql = new mysqli("localhost", "root", "", "levelup");
 $query_select = "SELECT * FROM lol WHERE nombre_de_cuenta='$nombre_de_cuenta'";
 $select = mysqli_query($mysql, $query_select);
 
-if ($nombre_de_cuenta != "" && $region != "" && $rango != "" && $precio != "" && $usuario_propietario = "admin") {
+if ($nombre_de_cuenta !="" && $region !="" && $rango !="" && $precio !="" && $usuario_propietario!= NULL) {
     if ($select->num_rows > '0') {
         setcookie("correccion_lol", "Cuenta ya existente", time() + 10, "/");
         header('Location: crear_venta.php');

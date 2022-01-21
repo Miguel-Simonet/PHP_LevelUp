@@ -9,7 +9,7 @@ $conn = new mysqli("localhost","root","","levelup");
 $query_insert = "INSERT INTO valorant (nombre, region, rango, precio, usuario_propietario) VALUE (\"$nombre_de_cuenta\",\"$region\",\"$rango\",\"$precio\",\"$usuario_propietario\")";
 //mysqli_query($conn, $query_insert);
 $query_select = "SELECT * FROM valorant WHERE nombre='$nombre_de_cuenta'";
-$select = mysqli_query($mysql, $query_select);
+$select = mysqli_query($conn, $query_select);
 //
 if ($nombre_de_cuenta != NULL && $region != NULL && $rango != NULL && $precio != NULL && $usuario_propietario != NULL){
     if ($select->num_rows > '0') {

@@ -316,7 +316,7 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="#">
+        <a href="../Pagina_Principal/index.php">
           <i class='bx bx-home-alt'></i>
           <span class="link_name">Inicio</span>
         </a>
@@ -534,6 +534,9 @@ function getCookie(name) {
 //
 var Cookie = getCookie("problema");
   if (Cookie == "Usuario+ya+registrado."){
+    document.getElementById("flip").checked = true;
+  }
+  if (Cookie == "Usuario%20ya%20registrado."){
     document.getElementById("flip").checked = true;
   }
 </script>

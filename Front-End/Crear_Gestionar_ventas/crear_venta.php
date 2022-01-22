@@ -12,11 +12,6 @@
     include("../../Boostrap_Thinks/boostrap.php");
     ?>
 </head>
-<style>
-    body {
-        background-color: #E4E9F7;
-    }
-</style>
 <script>
     function getCookie(name) {
         var nameEQ = name + "=";
@@ -83,7 +78,7 @@
     }
 </script>
 
-<body>
+<body style="background-color: #E4E9F7;">
     <!--Navbar Inicio-->
     <div class="sidebar close">
         <div class="logo-details">
@@ -204,7 +199,7 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'></i>
-            <span class="text">LevelUp Boosting</span>
+            <span class="text">Crear Venta</span>
         </div>
         <div style="margin-top: 1%;margin-bottom:1%;" id="menu">
             <div style="margin-right: 0;" class="row justify-content-center">
@@ -275,12 +270,13 @@
                             <label for="exampleInputEmail1" class="form-label">Rango en el juego actual</label>
                             <select name="rango_lol" class="form-select" aria-label="Default select example">
                                 <option value="Hierro">Hierro</option>
+                                <option value="Bronce">Bronce</option>
                                 <option value="Plata">Plata</option>
                                 <option value="Oro">Oro</option>
                                 <option value="Platino">Platino</option>
                                 <option value="Diamante">Diamante</option>
                                 <option value="Master">Master</option>
-                                <option value="Gran Master">Gran Master</option>
+                                <option value="Grand Master">Grand Master</option>
                                 <option value="Challenger">Challenger</option>
                             </select>
                             <label for="exampleInputEmail1" class="form-label">Precio de la venta</label>

@@ -141,7 +141,8 @@
             <i class='bx bx-menu'></i>
             <span class="text">LevelUp Boosting</span>
         </div>
-        <a>sample text</a>
+        <!--AQUI VA EL CONTENIDO DE LA PAGINA-->
+        
         <div>
             <?PHP
             include("../../Componentes/Footer/footer.php");

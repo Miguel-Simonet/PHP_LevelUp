@@ -143,7 +143,7 @@
         <div class="home-content">
             <i class='bx bx-menu'></i>
             <span class="text">League of Legends</span>
-            <div style="display: none;" id="lol_tabla" class="row justify-content-center">
+            <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
                 <?php
                 //FETCH DE LA TABLA
                 $conn = new mysqli("localhost", "root", "", "levelup");

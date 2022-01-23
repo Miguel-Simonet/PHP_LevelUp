@@ -143,21 +143,21 @@
         <div class="home-content">
             <i class='bx bx-menu'></i>
             <span class="text">Valorant</span>
-            <div style="display: none;" id="lol_tabla" class="row justify-content-center">
+            <div id="lol_tabla" class="row justify-content-center">
                 <?php
                 //FETCH DE LA TABLA
                 $conn = new mysqli("localhost", "root", "", "levelup");
-                $query_select = "SELECT * FROM lol";
+                $query_select = "SELECT * FROM valorant";
                 $table = mysqli_query($conn, $query_select);
                 while ($row = mysqli_fetch_assoc($table)) {
-                    $nombre = $row["nombre_de_cuenta"];
+                    $nombre = $row["nombre"];
                     $rango = $row["rango"];
                     $region = $row["region"];
                     $precio = $row["precio"];
                     //MOSTRAR TABLA
                     echo "
             <div class='card' style='width: 18rem;background-color: #11101d;margin-left:1%;margin-top:1%;'>
-                <img class='card-img-top' src='./Imagenes_lol/$rango.png' alt='Card image cap'>
+                <img class='card-img-top' src='./Imagenes_valorant/".$rango."_valorant.png' alt='Card image cap'>
                 <div  class='card-body'>
                     <h5 style='font-weight:bold' class='card-title text-white'>" . $nombre . "</h5>
                     <ul class='list-group list-group-flush'>

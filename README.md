@@ -8,7 +8,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/pr-raw/Miguel-Simonet/ASO_Entorno?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/Miguel-Simonet/ASO_Entorno?style=for-the-badge)
 
-<img src="exemplo-image.png" alt="exemplo imagem">
+<img src="https://www.leagueoflegends.com/static/open-graph-2e582ae9fae8b0b396ca46ff21fd47a8.jpg" alt="exemplo imagem">
 
 > Pagina web de venta de servicios en los videojuegos.
 

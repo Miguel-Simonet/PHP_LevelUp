@@ -305,7 +305,7 @@
   }
 </style>
 
-<body>
+<body style="background-color: #E4E9F7;">
   <div class="sidebar close">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>

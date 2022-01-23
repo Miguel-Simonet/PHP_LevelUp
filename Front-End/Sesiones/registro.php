@@ -18,6 +18,7 @@ if ($password==$password_2) {
     }else{
         $insert_user = mysqli_query($conn, $query_insert);;
         setcookie("problema", "Usuario registrado correctamente.", time()+100, "/");
+        header('Location: Registro_Inicio_Sesion.php');
     }
 }else{
     setcookie("problema", "Las contraseñas no coinciden.", time()+100, "/");

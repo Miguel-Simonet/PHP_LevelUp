@@ -19,7 +19,7 @@ session_start();
 </head>
 
 
-<body>
+<body style="background-color: #E4E9F7;">
     <!--Navbar Inicio-->
     <div class="sidebar close">
         <div class="logo-details">

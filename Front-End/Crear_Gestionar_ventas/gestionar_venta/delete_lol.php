@@ -6,6 +6,6 @@ $conn = new mysqli("localhost", "root", "", "levelup");
 echo $nombre;
 setcookie("delete_lol","Ha_sido_deleteado", time() +10, "/");
 mysqli_query($conn, $query_delete);
-////header('Location: gestionar_venta.php');
+header('Location: gestionar_venta.php');
 }
 ?>

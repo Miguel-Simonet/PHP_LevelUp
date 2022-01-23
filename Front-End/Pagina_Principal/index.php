@@ -12,6 +12,7 @@ session_start();
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/navbar.css">
     <script defer src="./JS/navbar.js"></script>
+    <link rel="stylesheet" href="../../CSS_Globales/CSS_Footer.css">
     <?php
     include("../../Boostrap_Thinks/boostrap.php");
     ?>
@@ -37,14 +38,14 @@ session_start();
             </li>
             <li>
                 <div class="iocn-link">
-                    <a href="#">
+                    <a href="../Sub_Paginas/lol/lol.php">
                         <i class='bx bx-collection'></i>
                         <span class="link_name">LoL</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="#">League of Legends</a></li>
+                    <li><a class="link_name" href="../Sub_Paginas/lol/lol.php">League of Legends</a></li>
                     <li><a href="#">Cuentas</a></li>
                     <li><a href="#">Coaching</a></li>
                     <li><a href="#">Busteos</a></li>
@@ -52,48 +53,48 @@ session_start();
             </li>
             <li>
                 <div class="iocn-link">
-                    <a href="#">
+                    <a href="../Sub_Paginas/val/valorant.php">
                         <i class='bx bx-game'></i>
                         <span class="link_name">Valorant</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Valorant</a></li>
+                    <li><a class="link_name" href="../Sub_Paginas/val/valorant.php">Valorant</a></li>
                     <li><a href="#">Cuentas</a></li>
                     <li><a href="#">Coaching</a></li>
                     <li><a href="#">Busteos</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">
+                <a href="../Sub_Paginas/ow/overwatch.php">
                     <i class='bx bx-loader-circle'></i>
                     <span class="link_name">Overwatch</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Overwatch</a></li>
+                    <li><a class="link_name" href="../Sub_Paginas/ow/overwatch.php">Overwatch</a></li>
                 </ul>
             </li>
             <?php
             if (isset($_COOKIE['sesion_iniciada_3'])){
                 echo "
             <li>
-                <a href='../Crear_Gestionar_ventas/crear_venta.php'>
+                <a href='../Crear_Gestionar_ventas/crear_venta/crear_venta.php'>
                     <i class='bx bx-edit-alt'></i>
                     <span class='link_name'>Crear Ventas</span>
                 </a>
                 <ul class='sub-menu blank'>
-                    <li><a class='link_name' href='#'>Crear Ventas</a></li>
+                    <li><a class='link_name' href='../Crear_Gestionar_ventas/crear_venta/crear_venta.php'>Crear Ventas</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href='#'>
+                <a href='../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php'>
                     <i class='bx bx-wrench'></i>
                     <span class='link_name'>Gestionar Ventas</span>
                 </a>
                 <ul class='sub-menu blank'>
-                    <li><a class='link_name' href='#'>Gestionar Ventas</a></li>
+                    <li><a class='link_name' href='#../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php>Gestionar Ventas'</a></li>
                 </ul>
             </li>
                 ";
@@ -161,9 +162,60 @@ session_start();
             <p>COSAS AQUI DE LA TIENDA</p>
 
         </div>
-        <?PHP
-        include("../Componentes/Footer/footer.php");
-        ?>
+        <footer id="footer">
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4>Level_Suscripción</h4>
+                        <p>Suscribete para estar siempre al dia de todas nuestras novedades y ofertas.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="" method="post"> <input type="email" name="email"><input type="submit" value="Subscrir"> </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Links de Utilidad</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Front-End/Pagina_Principal/index.php">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre nosotros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos y servicios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Politica de Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Nuestros Servicios</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/lol/lol.php">League of Legends</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/val/valorant.php">Valorant</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/ow/overwatch.php">Overwatch</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../Crear_Gestionar_ventas/crear_venta/crear_venta.php">Crear ventas</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php">Gestionar Ventas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contacta con Nosotros</h4>
+                        <p> A108 Adam Street <br> New York, NY 535022<br> United States <br><br> <strong>Teléfono:</strong> +1 5589 55488 55<br> <strong>Email:</strong> info@example.com<br> </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>Redes Sociales</h3>
+                        <p>Cualquier propuesta que tengais, duda , sugerencia de cualquier cosa no olvideis que podeis contanctar con nosotros en las redes sociales.</p>
+                        <div class="social-links mt-3"> <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright"> © Copyright <strong><span>DevVE</span></strong>. All Rights Reserved </div>
+            <div class="credits"> Diseñado por<a href="#">LevelUp Corporation</a> </div>
+        </div>
+    </footer>
     </section>
 
 </body>

@@ -202,7 +202,7 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Links de Utilidad</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Front-End/Pagina_Principal/index.php">Inicio</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre nosotros</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos y servicios</a></li>
@@ -212,11 +212,11 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Nuestros Servicios</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">League of Legends</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Valorant</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Overwatch</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Crear ventas</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Gestionar Ventas</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Front-End/Sub_Paginas/lol.php">League of Legends</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Front-End/Sub_Paginas/overwatch.php">Valorant</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Front-End/Sub_Paginas/valorant.php">Overwatch</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Front-End/Crear_Gestionar_ventas/crear_venta/crear_venta.php">Crear ventas</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="Front-End/Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php">Gestionar Ventas</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 footer-contact">

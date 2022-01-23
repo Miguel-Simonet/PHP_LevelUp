@@ -71,7 +71,7 @@
                 </ul>
             </li>
             <?php
-            if (isset($_COOKIE['sesion_iniciada_3'])){
+            if (isset($_COOKIE['sesion_iniciada_3'])) {
                 echo "
             <li>
                 <a href='../../Crear_Gestionar_ventas/crear_venta/crear_venta.php'>
@@ -143,19 +143,21 @@
         <div class="home-content">
             <i class='bx bx-menu'></i>
             <span class="text">League of Legends</span>
-            <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
-                <?php
-                //FETCH DE LA TABLA
-                $conn = new mysqli("localhost", "root", "", "levelup");
-                $query_select = "SELECT * FROM lol";
-                $table = mysqli_query($conn, $query_select);
-                while ($row = mysqli_fetch_assoc($table)) {
-                    $nombre = $row["nombre_de_cuenta"];
-                    $rango = $row["rango"];
-                    $region = $row["region"];
-                    $precio = $row["precio"];
-                    //MOSTRAR TABLA
-                    echo "
+        </div>
+        <p style="margin-left: 7%;font-weight:bolder;" class="fs-1">Cuentas del LoL</p>
+        <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
+            <?php
+            //FETCH DE LA TABLA
+            $conn = new mysqli("localhost", "root", "", "levelup");
+            $query_select = "SELECT * FROM lol";
+            $table = mysqli_query($conn, $query_select);
+            while ($row = mysqli_fetch_assoc($table)) {
+                $nombre = $row["nombre_de_cuenta"];
+                $rango = $row["rango"];
+                $region = $row["region"];
+                $precio = $row["precio"];
+                //MOSTRAR TABLA
+                echo "
             <div class='card' style='width: 18rem;background-color: #11101d;margin-left:1%;margin-top:1%;'>
                 <img class='card-img-top' src='./Imagenes_lol/$rango.png' alt='Card image cap'>
                 <div  class='card-body'>
@@ -164,13 +166,13 @@
                         <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Rango: " . $rango . "</li>
                         <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Región: " . $region . "</li>
                         <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Precio: " . $precio . "</li>
+                        <button style='font-weight:bold;' type='button' class='btn btn-light'>Comprar</button>
                     </ul>
                 </div>
             </div>
             ";
-                };
-                ?>
-            </div>
+            };
+            ?>
         </div>
         <div style="margin-top: 2%;">
             <footer id="footer">

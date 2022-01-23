@@ -94,7 +94,7 @@ session_start();
                     <span class='link_name'>Gestionar Ventas</span>
                 </a>
                 <ul class='sub-menu blank'>
-                    <li><a class='link_name' href='#../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php>Gestionar Ventas'</a></li>
+                    <li><a class='link_name' href='#../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php'>Gestionar Ventas</a></li>
                 </ul>
             </li>
                 ";

@@ -143,7 +143,9 @@
         <div class="home-content">
             <i class='bx bx-menu'></i>
             <span class="text">Overwatch</span>
-            <div id="lol_tabla" class="row justify-content-center">
+        </div>
+        <p style="margin-left: 7%;font-weight:bolder;" class="fs-1">Cuentas de Overwatch</p>
+        <div id="lol_tabla" class="row justify-content-center">
                 <?php
                 //FETCH DE LA TABLA
                 $conn = new mysqli("localhost", "root", "", "levelup");
@@ -164,6 +166,7 @@
                         <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Rango: " . $rango . "</li>
                         <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Región: " . $region . "</li>
                         <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Precio: " . $precio . "</li>
+                        <button style='font-weight:bold;' type='button' class='btn btn-light'>Comprar</button>
                     </ul>
                 </div>
             </div>
@@ -171,7 +174,6 @@
                 };
                 ?>
             </div>
-        </div>
         <div style="margin-top: 2%;">
             <footer id="footer">
                 <div class="footer-newsletter">

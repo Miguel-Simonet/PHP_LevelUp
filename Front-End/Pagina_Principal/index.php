@@ -76,7 +76,7 @@ session_start();
                 </ul>
             </li>
             <?php
-            if (isset($_COOKIE['sesion_iniciada_3'])){
+            if (isset($_COOKIE['sesion_iniciada_3'])) {
                 echo "
             <li>
                 <a href='../Crear_Gestionar_ventas/crear_venta/crear_venta.php'>
@@ -110,7 +110,7 @@ session_start();
                 </ul>
             </li>
             <?php
-            if (isset($_COOKIE['sesion_iniciada_3'])){
+            if (isset($_COOKIE['sesion_iniciada_3'])) {
                 echo "
             <li>
                 <a href='#'>
@@ -121,7 +121,8 @@ session_start();
                     <li><a class='link_name' href='#'>Ajustes</a></li>
                 </ul>
             </li>
-            ";}
+            ";
+            }
             ?>
             <li>
                 <div class="profile-details">
@@ -130,22 +131,21 @@ session_start();
                     </div>
                     <div class="name-job">
                         <div class="profile_name">Usuario</div>
-                        <div class="job">  
-                        <?=
+                        <div class="job">
+                            <?=
                             isset($_COOKIE["sesion_iniciada_3"]) ? $_COOKIE["sesion_iniciada_3"] : "<a href='../Sesiones/Registro_Inicio_Sesion.php'>Registrate</a>";
-                        ?>
+                            ?>
                         </div>
                     </div>
                     <script>
-                        function delCoockie(){
+                        function delCoockie() {
                             console.log("Cosas");
                             document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
                             location.reload();
                         }
-                        
                     </script>
                     <i onclick="delCoockie()" class='bx bx-log-out'></i>
-                    
+
                 </div>
             </li>
         </ul>
@@ -159,63 +159,150 @@ session_start();
         include("../Componentes/Carrusel/carrusel.php");
         ?>
         <div>
-            <p>COSAS AQUI DE LA TIENDA</p>
+            <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
+                <?php
+                //FETCH DE LA TABLA
+                $conn = new mysqli("localhost", "root", "", "levelup");
+                $query_select = "SELECT * FROM lol LIMIT 0, 5";
+                $table = mysqli_query($conn, $query_select);
+                while ($row = mysqli_fetch_assoc($table)) {
+                    $nombre = $row["nombre_de_cuenta"];
+                    $rango = $row["rango"];
+                    $region = $row["region"];
+                    $precio = $row["precio"];
+                    //MOSTRAR TABLA
+                    echo "
+            <div class='card' style='width: 18rem;background-color: #11101d;margin-left:1%;margin-top:1%;'>
+                <img class='card-img-top' src='./Imagenes_lol/$rango.png' alt='Card image cap'>
+                <div  class='card-body'>
+                    <h5 style='font-weight:bold' class='card-title text-white'>" . $nombre . "</h5>
+                    <ul class='list-group list-group-flush'>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Rango: " . $rango . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Región: " . $region . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Precio: " . $precio . "</li>
+                        <button style='font-weight:bold;' type='button' class='btn btn-light'>Comprar</button>
+                    </ul>
+                </div>
+            </div>
+            ";
+                };
+                ?>
 
-        </div>
-        <footer id="footer">
-        <div class="footer-newsletter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h4>Level_Suscripción</h4>
-                        <p>Suscribete para estar siempre al dia de todas nuestras novedades y ofertas.</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <form action="" method="post"> <input type="email" name="email"><input type="submit" value="Subscrir"> </form>
-                    </div>
+            </div>
+            <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
+                <?php
+                //FETCH DE LA TABLA
+                $conn = new mysqli("localhost", "root", "", "levelup");
+                $query_select = "SELECT * FROM valorant LIMIT 0, 5";
+                $table = mysqli_query($conn, $query_select);
+                while ($row = mysqli_fetch_assoc($table)) {
+                    $nombre = $row["nombre"];
+                    $rango = $row["rango"];
+                    $region = $row["region"];
+                    $precio = $row["precio"];
+                    //MOSTRAR TABLA
+                    echo "
+            <div class='card' style='width: 18rem;background-color: #11101d;margin-left:1%;margin-top:1%;'>
+                <img class='card-img-top' src='./Imagenes_valorant/".$rango."_valorant.png' alt='Card image cap'>
+                <div  class='card-body'>
+                    <h5 style='font-weight:bold' class='card-title text-white'>" . $nombre . "</h5>
+                    <ul class='list-group list-group-flush'>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Rango: " . $rango . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Región: " . $region . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Precio: " . $precio . "</li>
+                        <button style='font-weight:bold;' type='button' class='btn btn-light'>Comprar</button>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Links de Utilidad</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="Front-End/Pagina_Principal/index.php">Inicio</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre nosotros</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos y servicios</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Politica de Privacidad</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Nuestros Servicios</h4>
-                        <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/lol/lol.php">League of Legends</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/val/valorant.php">Valorant</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/ow/overwatch.php">Overwatch</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../Crear_Gestionar_ventas/crear_venta/crear_venta.php">Crear ventas</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php">Gestionar Ventas</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h4>Contacta con Nosotros</h4>
-                        <p> A108 Adam Street <br> New York, NY 535022<br> United States <br><br> <strong>Teléfono:</strong> +1 5589 55488 55<br> <strong>Email:</strong> info@example.com<br> </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6 footer-info">
-                        <h3>Redes Sociales</h3>
-                        <p>Cualquier propuesta que tengais, duda , sugerencia de cualquier cosa no olvideis que podeis contanctar con nosotros en las redes sociales.</p>
-                        <div class="social-links mt-3"> <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
-                    </div>
+            ";
+                };
+                ?>
+
+            </div>
+            <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
+                <?php
+                //FETCH DE LA TABLA
+                $conn = new mysqli("localhost", "root", "", "levelup");
+                $query_select = "SELECT * FROM overwatch LIMIT 0, 5";
+                $table = mysqli_query($conn, $query_select);
+                while ($row = mysqli_fetch_assoc($table)) {
+                    $nombre = $row["nombre"];
+                    $rango = $row["rango"];
+                    $region = $row["region"];
+                    $precio = $row["precio"];
+                    //MOSTRAR TABLA
+                    echo "
+            <div class='card' style='width: 18rem;background-color: #11101d;margin-left:1%;margin-top:1%;'>
+                <img class='card-img-top' src='./Imagenes_over/".$rango."_overwatch.png' alt='Card image cap'>
+                <div  class='card-body'>
+                    <h5 style='font-weight:bold' class='card-title text-white'>" . $nombre . "</h5>
+                    <ul class='list-group list-group-flush'>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Rango: " . $rango . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Región: " . $region . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Precio: " . $precio . "</li>
+                        <button style='font-weight:bold;' type='button' class='btn btn-light'>Comprar</button>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright"> © Copyright <strong><span>DevVE</span></strong>. All Rights Reserved </div>
-            <div class="credits"> Diseñado por<a href="#">LevelUp Corporation</a> </div>
-        </div>
-    </footer>
+            ";
+                };
+                ?>
+
+            </div>
+            <footer style="margin-top: 2%;" id="footer">
+                <div class="footer-newsletter">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Level_Suscripción</h4>
+                                <p>Suscribete para estar siempre al dia de todas nuestras novedades y ofertas.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <form action="" method="post"> <input type="email" name="email"><input type="submit" value="Subscrir"> </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 footer-links">
+                                <h4>Links de Utilidad</h4>
+                                <ul>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre nosotros</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos y servicios</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Politica de Privacidad</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 footer-links">
+                                <h4>Nuestros Servicios</h4>
+                                <ul>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/lol/lol.php">League of Legends</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/val/valorant.php">Valorant</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="../Sub_Paginas/ow/overwatch.php">Overwatch</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="../Crear_Gestionar_ventas/crear_venta/crear_venta.php">Crear ventas</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php">Gestionar Ventas</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 footer-contact">
+                                <h4>Contacta con Nosotros</h4>
+                                <p> A108 Adam Street <br> New York, NY 535022<br> United States <br><br> <strong>Teléfono:</strong> +1 5589 55488 55<br> <strong>Email:</strong> info@example.com<br> </p>
+                            </div>
+                            <div class="col-lg-3 col-md-6 footer-info">
+                                <h3>Redes Sociales</h3>
+                                <p>Cualquier propuesta que tengais, duda , sugerencia de cualquier cosa no olvideis que podeis contanctar con nosotros en las redes sociales.</p>
+                                <div class="social-links mt-3"> <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="copyright"> © Copyright <strong><span>DevVE</span></strong>. All Rights Reserved </div>
+                    <div class="credits"> Diseñado por<a href="#">LevelUp Corporation</a> </div>
+                </div>
+            </footer>
     </section>
 
 </body>

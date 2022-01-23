@@ -194,7 +194,7 @@
                         function delCoockie() {
                             console.log("Cosas");
                             document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                            window.location.href = "../Pagina_Principal/index.php";
+                            window.location.href = "../../Pagina_Principal/index.php";
                         }
                     </script>
                     <i onclick="delCoockie()" class='bx bx-log-out'></i>

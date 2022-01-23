@@ -208,8 +208,8 @@
                                     <li><i class="bx bx-chevron-right"></i> <a href="../../Sub_Paginas/lol/lol.php">League of Legends</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="../../Sub_Paginas/val/valorant.php">Valorant</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="../../Sub_Paginas/ow/overwatch.php">Overwatch</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../crear_venta/crear_venta.php">Crear ventas</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../gestionar_venta/gestionar_venta.php">Gestionar Ventas</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="../../Crear_Gestionar_ventas/crear_venta/crear_venta.php">Crear ventas</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="../../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php">Gestionar Ventas</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3 col-md-6 footer-contact">

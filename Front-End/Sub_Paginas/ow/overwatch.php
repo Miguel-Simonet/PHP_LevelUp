@@ -148,7 +148,7 @@
         <div id="lol_tabla" class="row justify-content-center">
                 <?php
                 //FETCH DE LA TABLA
-                $conn = new mysqli("localhost", "root", "", "levelup");
+                $conn = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
                 $query_select = "SELECT * FROM overwatch";
                 $table = mysqli_query($conn, $query_select);
                 while ($row = mysqli_fetch_assoc($table)) {

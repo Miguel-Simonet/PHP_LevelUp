@@ -107,7 +107,7 @@
         </div>
         
         <?php
-        $conn = new mysqli("localhost", "root", "", "levelup");
+        $conn = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
         $query_select = "SELECT * FROM valorant";
         $select = mysqli_query($conn, $query_select);
         //

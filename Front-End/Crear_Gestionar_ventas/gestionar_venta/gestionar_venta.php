@@ -254,7 +254,7 @@
             <?php
             //FETCH DE LA TABLA
             $usuario_propietario = $_COOKIE['sesion_iniciada_3'];
-            $conn = new mysqli("localhost", "root", "", "levelup");
+            $conn = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
             $query_select = "SELECT * FROM lol WHERE usuario_propietario='$usuario_propietario'";
             $table = mysqli_query($conn, $query_select);
             while ($row = mysqli_fetch_assoc($table)) {
@@ -289,7 +289,7 @@
             <?php
             //FETCH DE LA TABLA
             $usuario_propietario = $_COOKIE['sesion_iniciada_3'];
-            $conn = new mysqli("localhost", "root", "", "levelup");
+            $conn = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
             $query_select = "SELECT * FROM valorant WHERE usuario_propietario='$usuario_propietario'";
             $table = mysqli_query($conn, $query_select);
             while ($row = mysqli_fetch_assoc($table)) {
@@ -324,7 +324,7 @@
             <?php
             //FETCH DE LA TABLA
             $usuario_propietario = $_COOKIE['sesion_iniciada_3'];
-            $conn = new mysqli("localhost", "root", "", "levelup");
+            $conn = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
             $query_select = "SELECT * FROM overwatch WHERE usuario_propietario='$usuario_propietario'";
             $table = mysqli_query($conn, $query_select);
             while ($row = mysqli_fetch_assoc($table)) {

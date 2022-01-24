@@ -106,7 +106,7 @@
             <span class="text">LevelUp Boosting</span>
         </div>
         <?php
-        $conn = new mysqli("localhost", "root", "", "levelup");
+        $conn = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
         $query = "SELECT * FROM overwatch";
         $select = mysqli_query($conn, $query);
         //

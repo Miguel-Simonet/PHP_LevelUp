@@ -2,7 +2,7 @@
 $email=(trim(strip_tags($_POST['email'])));
 $contraseña=sha1((trim(strip_tags($_POST['contraseña']))));
 
-$conn = mysqli_connect("localhost","root","","levelup");
+$conn = mysqli_connect("localhost","id18339215_basededatoslevelup","go!AzAFLw8r8!A~E","id18339215_levelup");
 $query_usuario = "SELECT usuario,email,contraseña FROM sesions WHERE email = '$email'";
 $select_usuario = mysqli_query($conn, $query_usuario);
 

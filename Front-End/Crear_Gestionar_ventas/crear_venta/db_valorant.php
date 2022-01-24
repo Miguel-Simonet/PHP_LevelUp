@@ -5,7 +5,7 @@ $rango=trim(strip_tags($_POST["rango_valorant"]));
 $precio=trim(strip_tags($_POST["precio_valorant"]));
 $usuario_propietario=trim(strip_tags($_COOKIE["sesion_iniciada_3"]));
 
-$conn = new mysqli("localhost","root","","levelup");
+$conn = new mysqli("localhost","id18339215_basededatoslevelup","go!AzAFLw8r8!A~E","id18339215_levelup");
 $query_insert = "INSERT INTO valorant (nombre, region, rango, precio, usuario_propietario) VALUE (\"$nombre_de_cuenta\",\"$region\",\"$rango\",\"$precio\",\"$usuario_propietario\")";
 //mysqli_query($conn, $query_insert);
 $query_select = "SELECT * FROM valorant WHERE nombre='$nombre_de_cuenta'";

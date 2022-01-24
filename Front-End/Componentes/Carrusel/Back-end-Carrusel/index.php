@@ -49,7 +49,7 @@
     <?PHP
     function mysql_levelUp()
     {
-        return new mysqli("localhost", "root", "", "levelup");
+        return new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
     }
 
     $conn = mysql_levelUp();

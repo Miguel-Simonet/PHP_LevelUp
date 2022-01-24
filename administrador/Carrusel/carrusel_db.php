@@ -1,6 +1,6 @@
 <?php
 function mysql_levelUp(){
-    return new mysqli("localhost","root","","levelup");
+    return new mysqli("localhost","id18339215_basededatoslevelup","go!AzAFLw8r8!A~E","id18339215_levelup");
 }
 function insert_carrusel($titulo,$descripcion,$image){
     $mysql= mysql_levelUp();

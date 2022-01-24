@@ -22,7 +22,7 @@
     <div class="carousel-inner">
       <?PHP
       //Declaracion de variables y queries------------------
-      $con = mysqli_connect("localhost", "root", "", "levelup");
+      $con = mysqli_connect("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
       $query = 'SELECT * from carrusel';
       $tabla = mysqli_query($con, $query);
       $imagen = "";

@@ -5,7 +5,7 @@ $email=(trim(strip_tags($_POST['email'])));
 $password=sha1((trim(strip_tags($_POST['contraseña']))));
 $password_2=sha1((trim(strip_tags($_POST['contraseña2']))));
 //
-$conn = mysqli_connect("localhost","id18339215_basededatoslevelup","go!AzAFLw8r8!A~E","id18339215_levelup");
+$conn = mysqli_connect("localhost","root","","levelup");
 $query_insert = "INSERT INTO sesions (usuario, email, contraseña) VALUE (\"$nombre\",\"$email\",\"$password\")";
 $query_email = "SELECT email FROM sesions WHERE email = '$email'";
 //
@@ -18,7 +18,6 @@ if ($password==$password_2) {
     }else{
         $insert_user = mysqli_query($conn, $query_insert);;
         setcookie("problema", "Usuario registrado correctamente.", time()+100, "/");
-        header('Location: Registro_Inicio_Sesion.php');
     }
 }else{
     setcookie("problema", "Las contraseñas no coinciden.", time()+100, "/");

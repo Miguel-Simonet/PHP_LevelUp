@@ -23,12 +23,12 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="../../Pagina_Principal/index.php">
+                <a href="../../../index.php">
                     <i class='bx bx-home-alt'></i>
                     <span class="link_name">Inicio</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="../../Pagina_Principal/index.php">Inicio de la Web</a></li>
+                    <li><a class="link_name" href="../../../index.php">Inicio de la Web</a></li>
                 </ul>
             </li>
             <li>
@@ -130,7 +130,7 @@
                         function delCoockie() {
                             console.log("Cosas");
                             document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                            window.location.href = "../../Pagina_Principal/index.php";
+                            window.location.href = "../../../index.php";
                         }
                     </script>
                     <i onclick="delCoockie()" class='bx bx-log-out'></i>
@@ -148,7 +148,7 @@
         <div id="lol_tabla" class="row justify-content-center">
                 <?php
                 //FETCH DE LA TABLA
-                $conn = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
+                $conn = new mysqli("localhost", "root", "", "levelup");
                 $query_select = "SELECT * FROM valorant";
                 $table = mysqli_query($conn, $query_select);
                 while ($row = mysqli_fetch_assoc($table)) {
@@ -195,7 +195,7 @@
                             <div class="col-lg-3 col-md-6 footer-links">
                                 <h4>Links de Utilidad</h4>
                                 <ul>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../../Pagina_Principal/index.php">Inicio</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="../../../index.php">Inicio</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre nosotros</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos y servicios</a></li>

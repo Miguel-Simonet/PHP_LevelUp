@@ -5,8 +5,10 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Miguel-Simonet/ASO_Entorno?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Miguel-Simonet/ASO_Entorno?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/Miguel-Simonet/ASO_Entorno?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/pr-raw/Miguel-Simonet/ASO_Entorno?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/Miguel-Simonet/ASO_Entorno?style=for-the-badge)
 
-<img src="https://www.leagueoflegends.com/static/open-graph-2e582ae9fae8b0b396ca46ff21fd47a8.jpg" alt="exemplo imagem">
+<img src="exemplo-image.png" alt="exemplo imagem">
 
 > Pagina web de venta de servicios en los videojuegos.
 

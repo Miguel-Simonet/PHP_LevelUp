@@ -91,7 +91,7 @@
                     <script>
                         function delCoockie() {
                             document.cookie = "usuario=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                            window.location.href = "../../Front-End/Pagina_principal/index.php";
+                            window.location.href = "../../index.php";
                         }
                     </script>
                     <i onclick="delCoockie()" class='bx bx-log-out'></i>
@@ -106,7 +106,7 @@
             <span class="text">LevelUp Boosting</span>
         </div>
         <?php
-        $conn = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
+        $conn = new mysqli("localhost", "root", "", "levelup");
         $query = "SELECT * FROM carrusel";
         $select = mysqli_query($conn, $query);
         //

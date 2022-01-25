@@ -3,15 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- Fontawesome CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./CSS/sesion.css ">
-  <?php
-  include("../../Boostrap_Thinks/boostrap.php");
-  ?>
+  <!--<?php
+      include("../../../Boostrap_Thinks/boostrap.php");
+      ?>-->
 </head>
-<style !important>
+<style>
   /* Google Fonts Import Link */
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -306,6 +304,7 @@
 </style>
 
 <body>
+  <!--Navbar Inicio-->
   <div class="sidebar close">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
@@ -313,7 +312,7 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="../../index.php">
+        <a href="#">
           <i class='bx bx-home-alt'></i>
           <span class="link_name">Inicio</span>
         </a>
@@ -360,7 +359,6 @@
           <li><a class="link_name" href="#">Overwatch</a></li>
         </ul>
       </li>
-      <!--
       <li>
         <a href="#">
           <i class='bx bx-edit-alt'></i>
@@ -379,7 +377,6 @@
           <li><a class="link_name" href="#">Gestionar Ventas</a></li>
         </ul>
       </li>
--->
       <li>
         <a href="#">
           <i class='bx bx-compass'></i>
@@ -389,7 +386,6 @@
           <li><a class="link_name" href="#">Explorador</a></li>
         </ul>
       </li>
-      <!--
       <li>
         <a href="#">
           <i class='bx bx-cog'></i>
@@ -399,28 +395,16 @@
           <li><a class="link_name" href="#">Ajustes</a></li>
         </ul>
       </li>
--->
       <li>
         <div class="profile-details">
           <div class="profile-content">
             <img src="https://th.bing.com/th/id/R.0b94498aa4863bed528f68b6192425e1?rik=YRNMkX4Zd%2bmzNw&pid=ImgRaw&r=0" alt="profileImg">
           </div>
           <div class="name-job">
-            <div class="profile_name">Usuario</div>
-            <div class="job">
-              <?=
-              isset($_COOKIE["sesion_iniciada_3"]) ? $_COOKIE["sesion_iniciada_3"] : "<a href='./Registro_Inicio_Sesion.php'>Registrate</a>";
-              ?>
-            </div>
+            <div class="profile_name">Prem Shahi</div>
+            <div class="job">Web Desginer</div>
           </div>
-          <script>
-            function delCoockie() {
-              console.log("Cosas");
-              document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-              location.reload();
-            }
-          </script>
-          <i onclick="delCoockie()" class='bx bx-log-out'></i>
+          <i class='bx bx-log-out'></i>
         </div>
       </li>
     </ul>
@@ -428,130 +412,24 @@
   <section class="home-section">
     <div class="home-content">
       <i class='bx bx-menu'></i>
-      <span class="text">LevelUp Boosting</span>
-
-    </div>
-    <div class="container">
-      <input type="checkbox" id="flip">
-      <div class="cover">
-        <div class="front">
-          <img src="../Componentes/Carrusel/imagen/Lol.jpg" alt="">
-          <div class="text">
-            <span class="text-1">Cualquier amigo nuevo<br> es una nueva aventura</span>
-            <span class="text-2">Vamos a conectarnos</span>
-          </div>
-        </div>
-        <div class="back">
-          <img class="backImg" src="../Componentes/Carrusel/imagen/Overwatch.jpg" alt="">
-          <div class="text">
-            <span class="text-1">Consigue miles de sueños <br> solo con un click</span>
-            <span class="text-2">Empecemos</span>
-          </div>
-        </div>
-      </div>
-      <div class="forms">
-        <div class="form-content">
-          <div class="login-form">
-            <div class="title">Iniciar Sesión</div>
-            <!--FORMULARIO DE INICIAR SESION-->
-            <form action="iniciar_sesion.php" method="post">
-              <div class="input-boxes">
-                <div class="input-box">
-                  <i class="fas fa-envelope"></i>
-                  <input name="email" type="text" placeholder="Introduzca el email" required>
-                </div>
-                <div class="input-box">
-                  <i class="fas fa-lock"></i>
-                  <input name="contraseña" type="password" placeholder="Introduzca la contraseña" required>
-                </div>
-                <div class="text"><a href="#">Olvidaste tu contraseña?</a></div>
-                <div style="align-items: center;" id="emailHelp" class="form-text mx-auto">
-                  <?=
-                  isset($_COOKIE["sesion_iniciada"]) ? $_COOKIE["sesion_iniciada"] : "";
-                  ?>
-                </div>
-                <div class="button input-box">
-                  <input type="submit" value="Enviar">
-                </div>
-                <div class="text sign-up-text">No tienes una cuenta? <label for="flip">Registrate ahora</label></div>
-              </div>
-            </form>
-          </div>
-          <div class="signup-form">
-            <div class="title">Registrarse</div>
-            <!--FORMULARIO DE REGISTRO-->
-            <form action="registro.php" method="POST">
-              <div class="input-boxes">
-                <div class="input-box">
-                  <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Introduzca el nombre" name="nombre" required>
-                </div>
-                <div class="input-box">
-                  <i class="fas fa-envelope"></i>
-                  <input type="text" placeholder="Introduzca tu email" name="email" required>
-                </div>
-                <div class="input-box">
-                  <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Introduzca tu contraseña" name="contraseña" required>
-                </div>
-                <div class="input-box">
-                  <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Introduzca otra vez tu contraseña" name="contraseña2" required>
-                </div>
-                <div style="align-items: center;" id="emailHelp" class="form-text mx-auto">
-                  <?=
-                  isset($_COOKIE["problema"]) ? $_COOKIE["problema"] : "";
-                  ?>
-                </div>
-                <div class="button input-box">
-                  <input type="submit" value="Enviar">
-                </div>
-                <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Inicia sesión ahora</label></div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+      <span class="text"></span>
     </div>
   </section>
-
-</body>
-<script>
-//
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-      }
-    return null;
-  }
-//
-var Cookie = getCookie("problema");
-  if (Cookie == "Usuario+ya+registrado."){
-    document.getElementById("flip").checked = true;
-  }
-  if (Cookie == "Usuario%20ya%20registrado."){
-    document.getElementById("flip").checked = true;
-  }
-</script>
-
-<script>
-  let arrow = document.querySelectorAll(".arrow");
-  for (var i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e) => {
-      let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
-      arrowParent.classList.toggle("showMenu");
+  <script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e) => {
+        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+        arrowParent.classList.toggle("showMenu");
+      });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
     });
-  }
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".bx-menu");
-  console.log(sidebarBtn);
-  sidebarBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-  });
-</script>
+  </script>
+</body>
 
 </html>

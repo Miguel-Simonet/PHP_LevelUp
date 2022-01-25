@@ -1,7 +1,7 @@
 <?PHP
 function insert_league_of_legends($nombre_de_cuenta, $region, $rango, $precio, $usuario_propietario)
 {
-    $mysql = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
+    $mysql = new mysqli("localhost", "root", "", "levelup");
     $query_insert = "INSERT INTO lol (nombre_de_cuenta, region, rango, precio, usuario_propietario) VALUE (\"$nombre_de_cuenta\",\"$region\",\"$rango\",\"$precio\",\"$usuario_propietario\")";
     mysqli_query($mysql, $query_insert);
 }
@@ -11,7 +11,7 @@ $rango = trim(strip_tags($_POST["rango_lol"]));
 $precio = trim(strip_tags($_POST["precio_lol"]));
 $usuario_propietario = trim(strip_tags($_COOKIE["usuario"]));
 
-$mysql = new mysqli("localhost", "id18339215_basededatoslevelup", "", "id18339215_levelup");
+$mysql = new mysqli("localhost", "root", "", "levelup");
 $query_select = "SELECT * FROM lol WHERE nombre_de_cuenta='$nombre_de_cuenta'";
 $select = mysqli_query($mysql, $query_select);
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-01-2022 a las 23:52:20
+-- Tiempo de generación: 17-01-2022 a las 20:40:09
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -40,9 +40,9 @@ CREATE TABLE `carrusel` (
 --
 
 INSERT INTO `carrusel` (`id`, `titulo`, `descripcion`, `image`, `created_at`) VALUES
-(1, 'League of Legends;', 'Cuentas y coatch a buen precio.;', 'Lol.jpg', '2022-01-23 23:09:19'),
-(2, 'Overwatch;', 'Cuentas y coatch a buen precio.;', 'Overwatch.jpg', '2022-01-23 23:09:27'),
-(3, 'Valorant;', 'Cuentas y coatch a buen precio.;', 'valorant.jpg', '2022-01-23 23:09:35');
+(37, 'dadad;', 'dadadda;', '4.jpg', '2022-01-13 17:04:36'),
+(38, 'Titulo;', 'desc;', '4.jpg', '2022-01-13 17:04:53'),
+(40, 'Ultima;', 'desc;', '35fSxcr__400x400.jpg', '2022-01-13 17:17:14');
 
 -- --------------------------------------------------------
 
@@ -58,21 +58,6 @@ CREATE TABLE `lol` (
   `usuario_propietario` varchar(360) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `lol`
---
-
-INSERT INTO `lol` (`nombre_de_cuenta`, `region`, `rango`, `precio`, `usuario_propietario`) VALUES
-('Hierro', 'EU Oeste', 'Hierro', '120', 'Tomas'),
-('Bronze', 'EU Oeste', 'Bronce', '120', 'Tomas'),
-('Plata', 'EU Oeste', 'Plata', '120', 'Tomas'),
-('Oro', 'EU Oeste', 'Oro', '120', 'Tomas'),
-('Platino', 'EU Oeste', 'Platino', '120', 'Tomas'),
-('Diamante', 'EU Oeste', 'Diamante', '120', 'Tomas'),
-('Master', 'EU Oeste', 'Master', '120', 'Tomas'),
-('Grand Master', 'EU Oeste', 'Grand Master', '120', 'Tomas'),
-('Challenger', 'EU Oeste', 'Challenger', '120', 'Tomas');
-
 -- --------------------------------------------------------
 
 --
@@ -86,20 +71,6 @@ CREATE TABLE `overwatch` (
   `precio` varchar(360) NOT NULL,
   `usuario_propietario` varchar(360) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `overwatch`
---
-
-INSERT INTO `overwatch` (`nombre`, `region`, `rango`, `precio`, `usuario_propietario`) VALUES
-('Bronze', 'EUW', 'Bronze', '120', 'Tomas'),
-('Plata', 'EUW', 'Plata', '120', 'Tomas'),
-('Oro', 'EUW', 'Oro', '120', 'Tomas'),
-('Platino', 'EUW', 'Platino', '120', 'Tomas'),
-('Diamante', 'EUW', 'Diamante', '120', 'Tomas'),
-('Master', 'EUW', 'Master', '120', 'Tomas'),
-('Gran Master', 'EUW', 'Gran Master', '120', 'Tomas'),
-('Top 500', 'EUW', 'Top 500', '120', 'Tomas');
 
 -- --------------------------------------------------------
 
@@ -137,21 +108,6 @@ CREATE TABLE `valorant` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `valorant`
---
-
-INSERT INTO `valorant` (`nombre`, `region`, `rango`, `precio`, `usuario_propietario`) VALUES
-('Prueba 01', 'EUW', 'Hierro', '123', 'admin'),
-('Hierro', 'EUW', 'Hierro', '120', 'Tomas'),
-('Bronce', 'EUW', 'Bronce', '120', 'Tomas'),
-('Plata', 'EUW', 'Plata', '120', 'Tomas'),
-('Oro', 'EUW', 'Oro', '120', 'Tomas'),
-('Platino', 'EUW', 'Platino', '120', 'Tomas'),
-('Diamante', 'EUW', 'Diamante', '120', 'Tomas'),
-('Inmortal', 'EUW', 'Inmortal', '120', 'Tomas'),
-('Radiante', 'EUW', 'Radiante', '120', 'Tomas');
-
---
 -- Índices para tablas volcadas
 --
 
@@ -169,7 +125,7 @@ ALTER TABLE `carrusel`
 -- AUTO_INCREMENT de la tabla `carrusel`
 --
 ALTER TABLE `carrusel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +10,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../../Front-End/Pagina_Principal/CSS/navbar.css">
-    <script defer src="../../../Front-End/Pagina_Principal/JS/navbar.js"></script>
-    <link rel="stylesheet" href="../../../CSS_Globales/CSS_Footer.css">
+    <link rel="stylesheet" href="Front-End\Pagina_Principal\CSS\navbar.css">
+    <script defer src="Front-End\Pagina_Principal\JS\navbar.js"></script>
+    <link rel="stylesheet" href="CSS_Globales\CSS_Footer.css">
     <?php
-    include("../../../Boostrap_Thinks/boostrap.php");
+    include("Boostrap_Thinks\boostrap.php");
     ?>
 </head>
 
-<body style="background-color: #E4E9F7;">
+
+<body>
     <!--Navbar Inicio-->
     <div class="sidebar close">
         <div class="logo-details">
@@ -23,24 +28,24 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="../../../index.php">
+                <a href="#">
                     <i class='bx bx-home-alt'></i>
                     <span class="link_name">Inicio</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="../../../index.php">Inicio de la Web</a></li>
+                    <li><a class="link_name" href="#">Inicio de la Web</a></li>
                 </ul>
             </li>
             <li>
                 <div class="iocn-link">
-                    <a href="../lol/lol.php">
+                    <a href="Front-End\Sub_Paginas\lol\lol.php">
                         <i class='bx bx-collection'></i>
                         <span class="link_name">LoL</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="../lol/lol.php">League of Legends</a></li>
+                    <li><a class="link_name" href="Front-End\Sub_Paginas\lol\lol.php">League of Legends</a></li>
                     <li><a href="#">Cuentas</a></li>
                     <li><a href="#">Coaching</a></li>
                     <li><a href="#">Busteos</a></li>
@@ -48,48 +53,48 @@
             </li>
             <li>
                 <div class="iocn-link">
-                    <a href="../val/valorant.php">
+                    <a href="Front-End\Sub_Paginas\val\valorant.php">
                         <i class='bx bx-game'></i>
                         <span class="link_name">Valorant</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="../val/valorant.php">Valorant</a></li>
+                    <li><a class="link_name" href="Front-End\Sub_Paginas\val\valorant.php">Valorant</a></li>
                     <li><a href="#">Cuentas</a></li>
                     <li><a href="#">Coaching</a></li>
                     <li><a href="#">Busteos</a></li>
                 </ul>
             </li>
             <li>
-                <a href="../ow/overwatch.php">
+                <a href="Front-End\Sub_Paginas\ow\overwatch.php">
                     <i class='bx bx-loader-circle'></i>
                     <span class="link_name">Overwatch</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="../ow/overwatch.php">Overwatch</a></li>
+                    <li><a class="link_name" href="Front-End\Sub_Paginas\ow\overwatch.php">Overwatch</a></li>
                 </ul>
             </li>
             <?php
-            if (isset($_COOKIE['sesion_iniciada_3'])){
+            if (isset($_COOKIE['sesion_iniciada_3'])) {
                 echo "
             <li>
-                <a href='../../Crear_Gestionar_ventas/crear_venta/crear_venta.php'>
+                <a href='Front-End\Crear_Gestionar_ventas\crear_venta\crear_venta.php'>
                     <i class='bx bx-edit-alt'></i>
                     <span class='link_name'>Crear Ventas</span>
                 </a>
                 <ul class='sub-menu blank'>
-                    <li><a class='link_name' href='../../Crear_Gestionar_ventas/crear_venta/crear_venta.php'>Crear Ventas</a></li>
+                    <li><a class='link_name' href='Front-End\Crear_Gestionar_ventas\crear_venta\crear_venta.php'>Crear Ventas</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href='../../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php'>
+                <a href='Front-End\Crear_Gestionar_ventas\gestionar_venta\gestionar_venta.php'>
                     <i class='bx bx-wrench'></i>
                     <span class='link_name'>Gestionar Ventas</span>
                 </a>
                 <ul class='sub-menu blank'>
-                    <li><a class='link_name' href='../../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php'>Gestionar Ventas</a></li>
+                    <li><a class='link_name' href='#Front-End\Crear_Gestionar_ventas\gestionar_venta\gestionar_venta.php'>Gestionar Ventas</a></li>
                 </ul>
             </li>
                 ";
@@ -104,15 +109,21 @@
                     <li><a class="link_name" href="#">Explorador</a></li>
                 </ul>
             </li>
+            <?php
+            if (isset($_COOKIE['sesion_iniciada_3'])) {
+                echo "
             <li>
-                <a href="#">
+                <a href='#'>
                     <i class='bx bx-cog'></i>
-                    <span class="link_name">Ajustes</span>
+                    <span class='link_name'>Ajustes</span>
                 </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Ajustes</a></li>
+                <ul class='sub-menu blank'>
+                    <li><a class='link_name' href='#'>Ajustes</a></li>
                 </ul>
             </li>
+            ";
+            }
+            ?>
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
@@ -122,7 +133,7 @@
                         <div class="profile_name">Usuario</div>
                         <div class="job">
                             <?=
-                            isset($_COOKIE["sesion_iniciada_3"]) ? $_COOKIE["sesion_iniciada_3"] : "<a href='../../Sesiones/Registro_Inicio_Sesion.php'>Registrate</a>";
+                            isset($_COOKIE["sesion_iniciada_3"]) ? $_COOKIE["sesion_iniciada_3"] : "<a href='Front-End\Sesiones\Registro_Inicio_Sesion.php'>Registrate</a>";
                             ?>
                         </div>
                     </div>
@@ -130,7 +141,7 @@
                         function delCoockie() {
                             console.log("Cosas");
                             document.cookie = "sesion_iniciada_3=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                            window.location.href = "../../../index.php";
+                            location.reload();
                         }
                     </script>
                     <i onclick="delCoockie()" class='bx bx-log-out'></i>
@@ -142,24 +153,27 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'></i>
-            <span class="text">Overwatch</span>
+            <span class="text">LevelUp Boosting</span>
         </div>
-        <p style="margin-left: 7%;font-weight:bolder;" class="fs-1">Cuentas de Overwatch</p>
-        <div id="lol_tabla" class="row justify-content-center">
+        <?PHP
+        include("Front-End\Componentes\Carrusel\carrusel.php");
+        ?>
+        <div>
+            <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
                 <?php
                 //FETCH DE LA TABLA
                 $conn = new mysqli("localhost", "root", "", "levelup");
-                $query_select = "SELECT * FROM overwatch";
+                $query_select = "SELECT * FROM lol LIMIT 0, 5";
                 $table = mysqli_query($conn, $query_select);
                 while ($row = mysqli_fetch_assoc($table)) {
-                    $nombre = $row["nombre"];
+                    $nombre = $row["nombre_de_cuenta"];
                     $rango = $row["rango"];
                     $region = $row["region"];
                     $precio = $row["precio"];
                     //MOSTRAR TABLA
                     echo "
             <div class='card' style='width: 18rem;background-color: #11101d;margin-left:1%;margin-top:1%;'>
-                <img class='card-img-top' src='./Imagenes_over/".$rango."_overwatch.png' alt='Card image cap'>
+                <img class='card-img-top' src='Front-End/Sub_Paginas/lol/Imagenes_lol/$rango.png' alt='Card image cap'>
                 <div  class='card-body'>
                     <h5 style='font-weight:bold' class='card-title text-white'>" . $nombre . "</h5>
                     <ul class='list-group list-group-flush'>
@@ -173,9 +187,69 @@
             ";
                 };
                 ?>
+
             </div>
-        <div style="margin-top: 2%;">
-            <footer id="footer">
+            <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
+                <?php
+                //FETCH DE LA TABLA
+                $conn = new mysqli("localhost", "root", "", "levelup");
+                $query_select = "SELECT * FROM valorant LIMIT 0, 5";
+                $table = mysqli_query($conn, $query_select);
+                while ($row = mysqli_fetch_assoc($table)) {
+                    $nombre = $row["nombre"];
+                    $rango = $row["rango"];
+                    $region = $row["region"];
+                    $precio = $row["precio"];
+                    //MOSTRAR TABLA
+                    echo "
+            <div class='card' style='width: 18rem;background-color: #11101d;margin-left:1%;margin-top:1%;'>
+                <img class='card-img-top' src='Front-End/Sub_Paginas/val/Imagenes_valorant/".$rango."_valorant.png' alt='Card image cap'>
+                <div  class='card-body'>
+                    <h5 style='font-weight:bold' class='card-title text-white'>" . $nombre . "</h5>
+                    <ul class='list-group list-group-flush'>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Rango: " . $rango . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Región: " . $region . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Precio: " . $precio . "</li>
+                        <button style='font-weight:bold;' type='button' class='btn btn-light'>Comprar</button>
+                    </ul>
+                </div>
+            </div>
+            ";
+                };
+                ?>
+
+            </div>
+            <div style="position: relative;" id="lol_tabla" class="row justify-content-center">
+                <?php
+                //FETCH DE LA TABLA
+                $conn = new mysqli("localhost", "root", "", "levelup");
+                $query_select = "SELECT * FROM overwatch LIMIT 0, 5";
+                $table = mysqli_query($conn, $query_select);
+                while ($row = mysqli_fetch_assoc($table)) {
+                    $nombre = $row["nombre"];
+                    $rango = $row["rango"];
+                    $region = $row["region"];
+                    $precio = $row["precio"];
+                    //MOSTRAR TABLA
+                    echo "
+            <div class='card' style='width: 18rem;background-color: #11101d;margin-left:1%;margin-top:1%;'>
+                <img class='card-img-top' src='Front-End/Sub_Paginas/ow/Imagenes_over/".$rango."_overwatch.png' alt='Card image cap'>
+                <div  class='card-body'>
+                    <h5 style='font-weight:bold' class='card-title text-white'>" . $nombre . "</h5>
+                    <ul class='list-group list-group-flush'>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Rango: " . $rango . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Región: " . $region . "</li>
+                        <li style='font-weight:bold;background-color: #11101d;' class='list-group-item text-white'>Precio: " . $precio . "</li>
+                        <button style='font-weight:bold;' type='button' class='btn btn-light'>Comprar</button>
+                    </ul>
+                </div>
+            </div>
+            ";
+                };
+                ?>
+
+            </div>
+            <footer style="margin-top: 2%;" id="footer">
                 <div class="footer-newsletter">
                     <div class="container">
                         <div class="row">
@@ -195,7 +269,7 @@
                             <div class="col-lg-3 col-md-6 footer-links">
                                 <h4>Links de Utilidad</h4>
                                 <ul>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../../../index.php">Inicio</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#">Sobre nosotros</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
                                     <li><i class="bx bx-chevron-right"></i> <a href="#">Terminos y servicios</a></li>
@@ -205,11 +279,11 @@
                             <div class="col-lg-3 col-md-6 footer-links">
                                 <h4>Nuestros Servicios</h4>
                                 <ul>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../../Sub_Paginas/lol/lol.php">League of Legends</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../../Sub_Paginas/val/valorant.php">Valorant</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../../Sub_Paginas/ow/overwatch.php">Overwatch</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../../Crear_Gestionar_ventas/crear_venta/crear_venta.php">Crear ventas</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="../../Crear_Gestionar_ventas/gestionar_venta/gestionar_venta.php">Gestionar Ventas</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="Front-End\Sub_Paginas\lol\lol.php">League of Legends</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="Front-End\Sub_Paginas\val\valorant.php">Valorant</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="Front-End\Sub_Paginas\ow\overwatch.php">Overwatch</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="Front-End\Crear_Gestionar_ventas\crear_venta\crear_venta.php">Crear ventas</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="Front-End\Crear_Gestionar_ventas\gestionar_venta\gestionar_venta.php">Gestionar Ventas</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3 col-md-6 footer-contact">
@@ -229,8 +303,8 @@
                     <div class="credits"> Diseñado por<a href="#">LevelUp Corporation</a> </div>
                 </div>
             </footer>
-        </div>
     </section>
+
 </body>
 
 </html>

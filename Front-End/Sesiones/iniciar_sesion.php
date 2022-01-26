@@ -15,7 +15,7 @@ if ($email!=="admin" && $contraseña!==1234) {
             $_SESSION["sesion_iniciada_2"]="$usuario";
             setcookie("sesion_iniciada_3", "$usuario", time() +1314000, "/");
             //echo $_SESSION["sesion_iniciada_2"];
-            header('Location: ../../index.php');  
+            header('Location: ./../../index.php');  
       
         }else {
             setcookie("sesion_iniciada", "El email no existe o no coincide con la contraseña.", time()+10);
